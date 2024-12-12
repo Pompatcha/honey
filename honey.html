@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+    <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection">
+    <meta name="author" content="Patcharin Chanaphukdee">
+    <meta property="og:title" content="Premium Honey Collection">
+    <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+    <meta property="og:image" content="https://example.com/honey-image.jpg">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wine and Honey,Red wine, Honey organics</title>
+	</head>
+</html>
+    <style>
+		/* Slider Container middle text */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 410px;  /* Adjust the height to fit your design */
+            overflow: hidden;
+            max-width: 1215px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+            width: 100%;
+        }
+		/* Each slide */
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+		.slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Text Overlay for Honey Slides */
+        .slide .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+			padding: 40px 40px;
+			padding-top: 400px;
+			height: 10vh;
+			text-shadow: 2px 2px 4px Black;
+        }
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        /* Dots for Navigation */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #FFD700; /* Golden color for active dot */
+        }
+        .language-selector {
+            background-color: #444;
+            color: white;
+            border: 1px solid #fff;
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+			position: absolute;
+			top: 15px;
+			right: 20px;
+        }
+        .language-selector option {
+            background-color: #333;
+            color: white;
+        }
+        .language-selector:focus {
+            outline: none;
+        }
+		 .language-selector-container {
+            font-family: Arial, sans-serif;
+            text-align: right;
+            margin-top: 20px;
+			margin-bottom: 20px;
+        }
+        label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        select {
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+	     /* About our product.conteainer head */
+        .center-flex {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 5vh; /* Makes the container fill the entire viewport height */
+			background-color: #2B2B2B; /* Choose your background color */
+            color: white;  /* Text color inside the header */
+			padding-top: : 5px;
+		    padding-bottom: 5px;
+            text-align: center;
+			margin: 20px 0;
+        }
+		.highlight-frame {
+            background: linear-gradient(to right, #fff5db, #f9f1c2);
+            border: 2px solid #e2b007;
+            padding: 5px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+			margin: 10px 0;
+    </style>
+<body>    
+	<div class="language-selector-container">
+    <label for="language-selector">Choose Language:</label>
+    <select id="language-selector" name="language">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="pt">Portuguese</option>
+		<option value="th">Thai</option>
+		<option value="JP">Japanese</option>
+    </select>
+</div>
+	<div class="highlight-frame">
+    <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+</div>
+</body>
+<head>
+    <style>
+        /* Slider container */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1215px;
+            height: 550px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        /* Slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        /* Each slide */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dots navigation */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: white;
+        }
+        /* Basic Styling */
+        body 
+		{
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+		/* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			padding-top: 10px
+        }
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center;
+			font-size: 18px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00; /* Highlight on hover */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+			text-align: center;
+			font-size: 18px;
+        }
+        nav ul li {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+			font-size: 18px;
+			text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Show dropdown on hover */
+        nav ul li:hover > ul {
+            display: block;
+        }
+		/* Catalog Container */
+        .hero {
+            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+            height: 200px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 5.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .section {
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+			color: #333;
+			border-color: burlywood
+        }
+        .product {
+            background: #f8f1e1;
+            border: 1px solid #d4b483;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+		}
+        }
+		main {
+            padding: 20px;
+        }
+		h2 {
+			text-align: center;
+		}
+		
+        section {
+            margin-bottom: 5px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+		 /* footer */
+        footer {
+            background: #e2b007;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+			display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+            margin: 0;
+			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-section {
+            flex: 1 1 300px;
+            margin: 20px;
+        }
+        .footer-section h3 {
+            font-size: 18px;
+			color: #000000;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2b007;
+            padding-bottom: 5px;
+        }
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #000000;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: #e2b007;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #000000;
+            font-size: 18px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #e2b007;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #cf9c05;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #000000;
+        }
+        /* Button */
+        .buy-now {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #2F4F4F;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .buy-now:hover {
+			   background-color: #2F4F4F;
+        }  
+		.center-image {
+            display: block;         /* Makes the image a block element */
+            margin: 0 auto;         /* Centers the image horizontally */
+		
+		}
+    </style>
+</head>
+<body>
+<header>
+    <h1> Natrual Product 100% by Siam10 (Healthy and Wellness)</h1>
+	 <div class="slider">
+    <!-- Slides container -->
+    <div class="slides">
+        <div class="slide">
+            <img src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
+			</div>
+		<div class="slide">
+            <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
+        </div>
+		 <div class="slide">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
+        </div>
+		<div class="slide">
+            <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
+        </div>
+		<div class="slide">
+            <img src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
+        </div>
+		<div class="slide">
+            <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
+        </div>
+    </div>
+    <!-- Navigation buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Dots navigation -->
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    // Update the slider
+    function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Navigate to the next slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Navigate to the previous slide
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Automatic sliding
+    let autoSlide = setInterval(nextSlide, 3000);
+
+    // Pause auto sliding on user interaction
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider(index);
+            resetAutoSlide();
+        });
+    });
+    // Initialize
+    updateSlider(currentIndex);
+</script>
+</header>
+	<nav>
+        <ul>
+			<li><a href="#about">Home</a></li>
+            <li>
+                <a href="#services">Wine</a>
+                <ul>
+                    <li><a href="#Wine-Shop">Buy Wine</a></li>
+                    <li><a href="#Wine-Making">Wine Class</a></li>
+                    <li><a href="#Wine-Story">Wine Story</a></li>
+                </ul>
+            </li>
+			<li>
+                <a href="#honey">Honey</a>
+                <ul>
+                    <li><a href="#Pine">Pine</a></li>
+                    <li><a href="#Flower">Flower</a></li>
+                    <li><a href="#Thyme">Thyme</a></li>
+					<li><a href="#Oak">Oak and Forest</a></li>
+					<li><a href="#Orange">Orange</a></li>
+                    <li><a href="#Fir">Fir</a></li>
+					<li><a href="#Vanilla">Vanilla</a></li>
+                </ul>
+            </li>
+			<li><a href="#Olive oil">Olive Oil</a></li>
+			<li><a href="#Coffee bean">Coffee bean</a></li>
+			<li><a href="#Cusmetic">Organic Cosmetic</a></li>
+			<li><a href="#about">About us</a></li>
+			<li>
+                <a href="#services">Contact</a>
+               <ul>
+                    <li><a href="#Wine-Shop">International Shipping</a></li>
+                </ul>
+        </ul>
+    </nav>
+	<main>
+        <section id="about">
+            <h2>About us</h2>
+            <p>Collaborating with the Innovation to brainstrom, reserach, and evalate product concepts, Managing projects from ideation and development to market launch. Conduct food sience testing, including stability and shelf-life tests, to ensure product integrity, quality, and compliance with regulatory standards.I love working with nature. Is physically fit and healthy.   <a href="#">Read More</a></p>
+        </section>
+	<div class="center-flex">
+        <h2>Our Wine Product</h2>
+		</div>
+	<p>History of Siam10Winery  
+The company estabished by My name is Patcha living in Bangkok Thailand in South of East Asia  
+(may have originated from suvaṇṇabhūmi, "  land of gold") working with the specific agricultural  and food for international business sector for  15 years olds.Establish  Siam10 company is embarking on this project to promote sustainability and green living independent base on research food bioscience awareness making healthy food and organics product.</p>
+	<h4>Explore the finest selection of products and services designed to bring elegance,Honey is a natural sweetener with numerous health benefits. Rich in antioxidants and nutrients, it has been used for centuries for both culinary and medicinal purposes.Green foods are often vegetables, fruits, or plants that are naturally green due to their high content of chlorophyll, which is the pigment responsible for their color. These foods are typically rich in:</h4>
+		<ul>
+    <li>Vitamins (A, C, K, folate)</li>
+    <li>Minerals (iron, magnesium, potassium)</li>
+    <li>Fiber</li>
+    <li>Matcha</li>
+    <li>Antioxidants (like lutein and zeaxanthin)</li>
+</ul>
+	<p>why consume the honey? <a href="more-about-honey.html">Read More</a></p>
+	
+	<h2>The Differences Between Red And White Wine<b>bold</b> text.</h2>
+	<img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589226174810-0MI7LST26KC0PUGAZGD1/red-wine-vs-white-wine2.png?format=2500w" alt="Centered Image" width="450" height="200" style="display: block; margin: 0 auto;">
+	<p>There are some big differences between white wine and red wine that may influence your preference. For starters, they’re made using different colored grapes - red wine uses only red grapes while white wines use primarily white, and sometimes red or pinkish-gray grapes. But there are also key differences in the fermentation process that impact the flavor. Red wine is produced from grapes whose skin remains on during fermentation, while white wine is produced from grapes whose skin is removed before fermentation.  They are also aged in different ways, with white wines maturing in steel or iron vats while red wine is often aged in oak barrels. The container a wine ages in affects the airflow and the acidity of the wine.  The result is that red wines are smoother, bolder and more complex, while white wines often turn out a crisper, a bit sweeter,  and with higher acidity.Wine also contains tannins, which are part of the wine-drinking experience. Tannins are responsible for the drying sensation that you feel on the back of your tongue when you drink wine. If you enjoy that experience you may be more inclined toward red wines which are higher in tannins. If you don’t like it, or have tannin sensitivity, you may prefer white wines. <br>There’s also the berry vs citrus preference to consider. Red wines tend to have stronger notes of berries from raspberries, cherries, and strawberries, on the lighter side, to blueberries, blackberries, and black currants.  The flavors in white wines use more citrus, apple, peach, and other light fruit flavors with aromatic floral hints. Red wine is also where you’ll get those deep earthy notes and undertones of chocolate, wood, tobacco and spices.Your feelings about any one of these factors might be the reason you prefer for one over the other. But if you’re looking for a deeper meaning to your inclination, your personality may also influence your choice. Based on a survey conducted by OnePoll for Coravin in May 2019, there are distinct personality traits between those who drink red wine and those who prefer white. Here’s what they found: </p>
+<section id="wines" class="section">
+  <div class="center-flex">
+        <h2>Our Premium Wine</h2>
+		</div>
+    <div class="products">
+        <div class="product">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/delicious-red-wine-royalty-free-image-1585590768.jpg?resize=640:*" alt="Red Wine">
+            <h3>Red Wine</h3>
+			<p style="text-align: left;">Rich and bold with a touch of sophistication.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg" alt="yellow Wine">
+            <h3>Honey Wine</h3>
+			<p style="text-align: left;">Crisp, fresh, and perfect for any occasion.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+      </div>
+        <div class="product">
+            <img src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg" alt="Rosé Wine">
+            <h3>Rosé Wine</h3>
+			<p style="text-align: left;">Delicate and aromatic with a vibrant finish.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+</section>
+<section id="honey" class="section">
+    <div class="center-flex">
+        <h2>Our Premium Honey</h2>
+		</div>
+    <div class="products">
+        <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
+            <h3>Pine Honey</h3>
+			<p style="text-align: left;">Natural pure Aydın Pine Honey that will take you to the unique pine forests of Aydın with its unique taste and smell. 450G.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
+            <h3>Flower Honey</h3>
+			<p style="text-align: left;">This honey category comes from the flower nectar.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
+            <h3>Thyme Honey</h3>
+			<p style="text-align: left;">Thyme honey is a special honey because of its spicy flavor and the special effects it has on health.<a href="#">Read More</a></p>
+			<p class="product-price">$49.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+</section>
+<section id="honey" class="section">
+    <div class="products">
+        <div class="product">
+          <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt="Oak Honey">
+            <h3>Oak and Forest</h3>
+			<p style="text-align: left;">Unique woody smell and high taste. It is a honey that stands out with its high antioxidant and mineral values.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhJKP29ftdegx_PZoGcWUw64RObMnEicAUA&s" alt="Orange">
+            <h3>Orange Honey</h3>
+			<p style="text-align: left;">Orange Blossom Pure Raw Honey.The zest has concentrated orange flavor, without a lot of moisture. This is ideal because we don't want to add water to the honey.</p>
+			<p><a href="#">Read More</a></p>
+			<p class="product-price">$49.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" alt="Vanilia Honey">
+            <h3>Vanilia Honey</h3>
+			<p style="text-align: left;">ich in polyphenols and phenolic acids, with significant antioxidant, antimicrobial and anti-inflammatory activity.<a href="#">Read More</a></p>
+			<p class="product-price">$49.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+	<section id="fruit" class="section">
+  <div class="center-flex">
+        <h2>Premium Fruit</h2>
+		</div>
+    <div class="products">
+        <div class="product">
+            <img src="https://parachutekalpavriksha.org/cdn/shop/articles/Sure_ways_to_keep_the_coconut_tree_healthy.jpg?v=1711267599&width=2048" alt="Coconut">
+            <h3>Coconut</h3>
+			<p style="text-align: left;">Rich and bold with a touch of sophistication.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="https://ibio.co.th/products/image/catalog/Mind/Ingredients%20/fqxwjp.jpg">
+            <h3>Mangoteen</h3>
+			<p style="text-align: left;">Crisp, fresh, and perfect for any occasion.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+      </div>
+        <div class="product">
+            <img src="https://f.btwcdn.com/store-43065/product/d63dc323-a5e1-d893-653b-6011024d8d53.jpg" alt="Mango">
+            <h3>Mango</h3>
+			<p style="text-align: left;">Delicate and aromatic with a vibrant finish.<a href="#">Read More</a></p>
+			<p class="product-price">$00.99</p>
+			<a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+</section>
+<footer>
+		<div class="footer-container">
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>International Shipping</p>
+            <p>Address: Asia Bangkok, Thailand</p>
+            <p>Phone: <a href="tel:+1234567890">+6689 693 1668</a></p>
+            <p>Email: <a href="info@siam10.com">info@siam10.com</a></p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
+                <a href="#" target="_blank">📸 Instagram</a>
+                <a href="#" target="_blank">🐦 Twitter</a>
+                <a href="#" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+        <!-- Contact Form -->
+        <div class="footer-section">
+            <h3>Quick Contact</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" requ
+</footer>
+    </footer>		
+			<div class="center-flex">
+            <h2>Contact us</h2>
+            <p>I© 2024 Pure Healthy Living. All rights reserved. Read our Privacy Policy or unsubscribe from our newsletter. <a href="#">get in touch</a>.</p>
+        </div>
+</body>
+</html>
