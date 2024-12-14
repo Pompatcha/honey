@@ -485,106 +485,6 @@
 </head>
 <body>
 <header>
-    <h1> Natrual Product 100% by Siam10 (Healthy and Wellness)</h1>
-	 <div class="slider">
-    <!-- Slides container -->
-    <div class="slides">
-        <div class="slide">
-            <img src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
-        </div>
-        <div class="slide">
-            <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
-        </div>
-        <div class="slide">
-            <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
-			</div>
-		<div class="slide">
-            <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
-        </div>
-		 <div class="slide">
-            <img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
-        </div>
-		<div class="slide">
-            <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
-        </div>
-		<div class="slide">
-            <img src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
-        </div>
-		<div class="slide">
-            <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
-        </div>
-    </div>
-    <!-- Navigation buttons -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-
-    <!-- Dots navigation -->
-    <div class="dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-</div>
-<script>
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let currentIndex = 0;
-
-    // Update the slider
-    function updateSlider(index) {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
-    // Navigate to the next slide
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slide.length;
-        updateSlider(currentIndex);
-    }
-
-    // Navigate to the previous slide
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
-        updateSlider(currentIndex);
-    }
-
-    // Automatic sliding
-    let autoSlide = setInterval(nextSlide, 3000);
-
-    // Pause auto sliding on user interaction
-    function resetAutoSlide() {
-        clearInterval(autoSlide);
-        autoSlide = setInterval(nextSlide, 3000);
-    }
-
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoSlide();
-    });
-
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlider(index);
-            resetAutoSlide();
-        });
-    });
-    // Initialize
-    updateSlider(currentIndex);
-</script>
-</header>
 	<nav>
         <ul>
 			<li><a href="#about">Home</a></li>
@@ -617,8 +517,8 @@
                <ul>
                     <li><a href="#Wine-Shop">International Shipping</a></li>
                 </ul>
-        </ul>
     </nav>
+	</header>
 	<main>
         <section id="about">
             <h2>About us</h2>
