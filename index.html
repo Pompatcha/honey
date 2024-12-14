@@ -128,7 +128,7 @@
         .language-selector:focus {
             outline: none;
         }
-		 .language-selector-container {
+	.language-selector-container {
             font-family: Arial, sans-serif;
             text-align: right;
             margin-top: 20px;
@@ -157,7 +157,7 @@
             text-align: center;
 			margin: 20px 0;
         }
-		.highlight-frame {
+	    .highlight-frame {
             background: linear-gradient(to right, #fff5db, #f9f1c2);
             border: 2px solid #e2b007;
             padding: 5px;
@@ -168,27 +168,29 @@
 			margin: 10px 0;
 		}
 			 <script type="text/javascript">
-        function changeLanguage() {
-            const selectedLanguage = document.getElementById("languageSelect").value;
-            if (selectedLanguage === "th") {
-                window.location.href = "https://www.siam10winery.com/th";  // Redirect to the Thai page
-            } else if (selectedLanguage === "en") {
-                window.location.href = https://www.siam10winery.com/th";  // Redirect to the English page
+        function changeLanguage(language) {
+            let content = document.getElementById("content");
+            
+            if (language === "en") {
+                content.innerHTML = "Welcome to our website!";
+            } else if (language === "th") {
+                content.innerHTML = "ยินดีต้อนรับสู่เว็บไซต์ของเรา!";
+            } else if (language === "es") {
+                content.innerHTML = "¡Bienvenido a nuestro sitio web!";
             }
-            // Add more cases as needed for other languages
-        }
     </script>
     </style>
 <body>    
 	<div class="language-selector-container">
-	<label for="languageSelect">Select Language:</label>
-    <select id="languageSelect" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="es">Espanol</option>
-	<option value="th">ภาษาไทย</option>
-	<option value="JP">日本語</option>
-    </select>
-	</div>
+	  <p>Select your language:</p>
+    <a href="index.html" onclick="changeLanguage('en')">English</a> | 
+    <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย</a> | 
+    <a href="#" onclick="changeLanguage('es')">Español</a>
+
+    <div id="content">
+        <!-- Content will change based on the selected language -->
+        Welcome to our website!
+    </div>
 	<div class="highlight-frame">
     <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
 </div>
