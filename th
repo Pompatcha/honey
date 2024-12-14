@@ -222,6 +222,35 @@
         nav ul li a:hover {
             background-color: #575757;
         }
+<script type="text/javascript">
+        function changeLanguage(language) {
+            let content = document.getElementById("content");
+            
+            if (language === "en") {
+                content.innerHTML = "Welcome to our website!";
+            } else if (language === "th") {
+                content.innerHTML = "ยินดีต้อนรับสู่เว็บไซต์ของเรา!";
+            } else if (language === "es") {
+                content.innerHTML = "¡Bienvenido a nuestro sitio web!";
+            }
+        }
+    </script>
+    </style>
+<body>    
+	<div class="language-selector-container">
+    <p>Select your language:</p>
+    <a href="#" onclick="changeLanguage('en')">English</a> | 
+    <a href="#" onclick="changeLanguage('th')">ภาษาไทย</a> | 
+    <a href="#" onclick="changeLanguage('es')">Español</a>
+    <div id="content">
+        <!-- Content will change based on the selected language -->
+        Welcome to our website!
+</div>
+	<div class="highlight-frame">
+    <p>"🍷Wine and honey🐝 is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+</div>
+</body>
+
 <body>
 <header>
     <h1> Natrual Product 100% by Siam10 (Healthy and Wellness)</h1>
