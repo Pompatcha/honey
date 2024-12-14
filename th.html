@@ -157,7 +157,7 @@
             text-align: center;
 			margin: 20px 0;
         }
-		.highlight-frame {
+	    .highlight-frame {
             background: linear-gradient(to right, #fff5db, #f9f1c2);
             border: 2px solid #e2b007;
             padding: 5px;
@@ -165,18 +165,30 @@
             font-style: italic;
             color: #333;
             text-align: center;
-			margin: 10px 0;
+	    margin: 10px 0;
+       <script type="text/javascript">
+        function changeLanguage(language) {
+            let content = document.getElementById("content");
+            if (language === "en") {
+                content.innerHTML = "Welcome to our website!";
+            } else if (language === "th") {
+                content.innerHTML = "ยินดีต้อนรับสู่เว็บไซต์ของเรา!";
+            } else if (language === "es") {
+                content.innerHTML = "¡Bienvenido a nuestro sitio web!";
+            }
+    </script>
     </style>
 <body>    
 	<div class="language-selector-container">
-    <label for="language-selector">Choose Language:</label>
-    <select id="language-selector" name="language">
-        <option value="en">English</option>
-        <option value="es">Espanol</option>
-	<option value="th">ภาษาไทย</option>
-	<option value="JP">日本語</option>
-    </select>
-</div>
+	  <p>Select your language:</p>
+    <a href="index.html" onclick="changeLanguage('en')">English</a> | 
+    <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย</a> | 
+    <a href="#" onclick="changeLanguage('es')">Español</a>
+
+    <div id="content">
+        <!-- Content will change based on the selected language -->
+        Welcome to our website!
+    </div>
 	<div class="highlight-frame">
     <p>"ไวน์และน้ำผึ้งถือเป็นทองคำแห่งธรรมชาติที่บริสุทธิ์เป็นธรรมชาติและเต็มไปด้วยคุณสมบัติในการเพิ่มคุณค่าชีวิต"</p>
 </div>
@@ -515,14 +527,14 @@
 			<li>
                 <a href="#services">Contact</a>
                <ul>
-                    <li><a href="#Wine-Shop">International Shipping</a></li>
+                    <li><a href="#Wine-Shop">จัดส่งไปต่างประเทศ</a></li>
                 </ul>
     </nav>
 	</header>
 	<main>
         <section id="about">
             <h2>เกี่ยวกับเรา</h2>
-            <p>ร่วมมือกับฝ่ายนวัตกรรมเพื่อระดมสมอง วิจัย และประเมินแนวคิดผลิตภัณฑ์ จัดการโครงการตั้งแต่การคิดค้นและพัฒนาจนถึงการเปิดตัวสู่ตลาด ดำเนินการทดสอบวิทยาศาสตร์อาหาร รวมถึงการทดสอบความเสถียรและอายุการเก็บรักษา เพื่อให้แน่ใจว่าผลิตภัณฑ์มีความสมบูรณ์ มีคุณภาพ และเป็นไปตามมาตรฐานการกำกับดูแล ฉันรักการทำงานกับธรรมชาติ มีร่างกายที่สมบูรณ์และมีสุขภาพดี<a href="#">Read More</a></p>
+            <p>ร่วมมือกับฝ่ายนวัตกรรมเพื่อระดมสมอง วิจัย และประเมินแนวคิดผลิตภัณฑ์ จัดการโครงการตั้งแต่การคิดค้นและพัฒนาจนถึงการเปิดตัวสู่ตลาด ดำเนินการทดสอบวิทยาศาสตร์อาหาร รวมถึงการทดสอบความเสถียรและอายุการเก็บรักษา<br> เพื่อให้แน่ใจว่าผลิตภัณฑ์มีความสมบูรณ์ มีคุณภาพ และเป็นไปตามมาตรฐานการกำกับดูแล ฉันรักการทำงานกับธรรมชาติ มีร่างกายที่สมบูรณ์และมีสุขภาพดี ได้รับความร่วมมือจากสหภาพยุโรปรับรองสินค้าตามระบบมาตรฐานควบคุมสากล<a href="#"> Read More</a></p>
         </section>
 	<div class="center-flex">
         <h2>Our Wine Product</h2>
@@ -538,7 +550,7 @@
 </ul>
 	<p>เหตุใดจึงต้องรับประทานน้ำผึ้ง?<a href="more-about-honey.html">อ่านเพิ่มเติม</a></p>
 	
-	<h2>ความแตกต่างระหว่างไวน์แดงและไวน์ขาว<b>bold</b> text.</h2>
+	<h2>ความแตกต่างระหว่างไวน์แดงและไวน์ขาว<b>bold</b></h2>
 	<img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589226174810-0MI7LST26KC0PUGAZGD1/red-wine-vs-white-wine2.png?format=2500w" alt="Centered Image" width="450" height="200" style="display: block; margin: 0 auto;">
 	<p>ไวน์ขาวและไวน์แดงมีข้อแตกต่างที่สำคัญบางประการที่อาจส่งผลต่อความชอบของคุณ ไวน์ขาวทำมาจากองุ่นที่มีสีต่างกัน ไวน์แดงใช้เฉพาะองุ่นแดงเท่านั้น ในขณะที่ไวน์ขาวใช้องุ่นขาวเป็นหลัก และบางครั้งก็ใช้องุ่นแดงหรือชมพูอมเทา แต่กระบวนการหมักก็มีความแตกต่างที่สำคัญเช่นกัน ซึ่งส่งผลต่อรสชาติ ไวน์แดงผลิตจากองุ่นที่มีเปลือกติดอยู่ระหว่างการหมัก ในขณะที่ไวน์ขาวผลิตจากองุ่นที่มีเปลือกลอกออกก่อนการหมัก ไวน์ขาวยังผ่านการบ่มด้วยวิธีที่แตกต่างกัน โดยไวน์ขาวจะบ่มในถังเหล็กหรือถังเหล็ก ในขณะที่ไวน์แดงมักจะบ่มในถังไม้โอ๊ก ภาชนะที่ใช้บ่มไวน์จะส่งผลต่อการไหลเวียนของอากาศและความเป็นกรดของไวน์ ผลลัพธ์ก็คือไวน์แดงจะมีความนุ่มนวล เข้มข้น และซับซ้อนกว่า ในขณะที่ไวน์ขาวมักจะออกมากรอบกว่า หวานกว่าเล็กน้อย และมีความเป็นกรดสูงกว่า ไวน์ยังมีแทนนินซึ่งเป็นส่วนหนึ่งของประสบการณ์การดื่มไวน์อีกด้วย แทนนินเป็นสารที่ให้ความรู้สึกแห้งที่ลิ้นเมื่อคุณดื่มไวน์ หากคุณชอบรสชาติแบบนี้ คุณอาจจะชอบไวน์แดงซึ่งมีแทนนินสูงกว่า แต่ถ้าคุณไม่ชอบหรือมีอาการแพ้แทนนิน คุณอาจชอบไวน์ขาวมากกว่า<br>นอกจากนี้ ยังมีผลไม้ตระกูลเบอร์รี่หรือส้มให้พิจารณาด้วย ไวน์แดงมักจะมีกลิ่นของผลไม้ตระกูลเบอร์รี่ที่เข้มข้นกว่า เช่น ราสเบอร์รี่ เชอร์รี่ และสตรอว์เบอร์รี่ ส่วนไวน์ขาวจะมีกลิ่นอ่อนๆ เช่น บลูเบอร์รี่ แบล็กเบอร์รี่ และแบล็กเคอแรนต์ รสชาติของไวน์ขาวจะมีกลิ่นส้ม แอปเปิล พีช และผลไม้รสอ่อนอื่นๆ มากกว่า พร้อมกลิ่นหอมอ่อนๆ ของดอกไม้ ไวน์แดงยังเป็นไวน์ที่คุณจะได้กลิ่นดินที่เข้มข้นและกลิ่นรองของช็อกโกแลต ไม้ ยาสูบ และเครื่องเทศ ความรู้สึกของคุณเกี่ยวกับปัจจัยใดปัจจัยหนึ่งอาจเป็นเหตุผลที่คุณเลือกไวน์หนึ่งมากกว่าอีกไวน์หนึ่ง แต่ถ้าคุณกำลังมองหาความหมายที่ลึกซึ้งกว่าสำหรับความชอบของคุณ บุคลิกภาพของคุณก็อาจส่งผลต่อการเลือกของคุณได้เช่นกัน จากการสำรวจที่จัดทำโดย OnePoll สำหรับ Coravin ในเดือนพฤษภาคม 2019 พบว่าผู้ที่ดื่มไวน์แดงและผู้ที่ดื่มไวน์ขาวมีลักษณะบุคลิกภาพที่แตกต่างกัน นี่คือสิ่งที่พวกเขาพบ:</p>
 <section id="wines" class="section">
@@ -549,23 +561,23 @@
         <div class="product">
             <img src="https://hips.hearstapps.com/hmg-prod/images/delicious-red-wine-royalty-free-image-1585590768.jpg?resize=640:*" alt="Red Wine">
             <h3>ไวน์แดง</h3>
-			<p style="text-align: left;">ความเข้มข้นและกล้าหาญพร้อมสัมผัสแห่งความซับซ้อน<a href="#">Read More</a></p>
+			<p style="text-align: left;">ความเข้มข้นและกล้าหาญพร้อมสัมผัสแห่งความซับซ้อน<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$00.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
         <div class="product">
             <img src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg" alt="yellow Wine">
-            <h3>Honey Wine</h3>
-			<p style="text-align: left;">Crisp, fresh, and perfect for any occasion.<a href="#">Read More</a></p>
+            <h3>ไวน์น้ำผึ้ง</h3>
+			<p style="text-align: left;">Crisp, fresh, and perfect for any occasion.<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$00.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
       </div>
         <div class="product">
             <img src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg" alt="Rosé Wine">
             <h3>Rosé Wine</h3>
-			<p style="text-align: left;">Delicate and aromatic with a vibrant finish.<a href="#">Read More</a></p>
+			<p style="text-align: left;">Delicate and aromatic with a vibrant finish.<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$00.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
     </div>
 </section>
@@ -576,24 +588,24 @@
     <div class="products">
         <div class="product">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
-            <h3>Pine Honey</h3>
-			<p style="text-align: left;">Natural pure Aydın Pine Honey that will take you to the unique pine forests of Aydın with its unique taste and smell. 450G.<a href="#">Read More</a></p>
+            <h3>น้ำผึ้งจากต้นไพน์</h3>
+			<p style="text-align: left;">น้ำผึ้งสนบริสุทธิ์จากธรรมชาติในเทือกเขาลึกที่จะพาคุณไปสู่ป่าสนอันเป็นเอกลักษณ์ของด้วยรสชาติและกลิ่นอันเป็นเอกลักษณ์ของสมุนไพร. 450G.<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$39.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
         <div class="product">
             <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
-            <h3>Flower Honey</h3>
-			<p style="text-align: left;">This honey category comes from the flower nectar.<a href="#">Read More</a></p>
+            <h3>น้ำผึ้งจากดอกไม้นานาพันธุ์</h3>
+			<p style="text-align: left;">เหล่ามวลผึ้งน้อยน้ำผึ้งของเขาได้มาจากน้ำหวานจากดอกไม้<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$39.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
         <div class="product">
             <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
             <h3>Thyme Honey</h3>
-			<p style="text-align: left;">Thyme honey is a special honey because of its spicy flavor and the special effects it has on health.<a href="#">Read More</a></p>
+			<p style="text-align: left;">น้ำผึ้งจากสมุนไพรเครื่องเทศไทม์ออนแกนนิกส์จากตระกูลมิ้นท์เป็นน้ำผึ้งที่มีลักษณะพิเศษเนื่องจากมีรสชาติเผ็ดร้อนและมีสรรพคุณพิเศษต่อสุขภาพ<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$39.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
     </div>
 </section>
@@ -601,25 +613,25 @@
     <div class="products">
         <div class="product">
           <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt="Oak Honey">
-            <h3>Oak and Forest</h3>
-			<p style="text-align: left;">Unique woody smell and high taste. It is a honey that stands out with its high antioxidant and mineral values.<a href="#">Read More</a></p>
+            <h3>น้ำผึ้งจากป่าต้นโอ๊ค</h3>
+			<p style="text-align: left;">กลิ่นไม้ที่เป็นเอกลักษณ์และรสชาติที่เข้มข้น เป็นน้ำผึ้งที่โดดเด่นด้วยคุณค่าสารต้านอนุมูลอิสระและแร่ธาตุสูง.<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$39.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
         <div class="product">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhJKP29ftdegx_PZoGcWUw64RObMnEicAUA&s" alt="Orange">
-            <h3>Orange Honey</h3>
-			<p style="text-align: left;">Orange Blossom Pure Raw Honey.The zest has concentrated orange flavor, without a lot of moisture. This is ideal because we don't want to add water to the honey.</p>
-			<p><a href="#">Read More</a></p>
+            <h3>น้ำผึ้งดอกส้ม</h3>
+			<p style="text-align: left;">น้ำผึ้งดิบบริสุทธิ์กลิ่นส้ม กลิ่นเปลือกส้มมีรสส้มจากผลส้มและดอกส้มบริสุทธิ์</p>
+			<p><a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$39.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
         <div class="product">
             <img src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" alt="Vanilia Honey">
-            <h3>"Pearl" Fir Honey</h3>
-			<p style="text-align: left;">ich in polyphenols and phenolic acids, with significant antioxidant, antimicrobial and anti-inflammatory activity.<a href="#">Read More</a></p>
+            <h3>"ไข่มุก "น้ำผึ้งเฟอร์"</h3>
+			<p style="text-align: left;">อุดมไปด้วยโพลีฟีนอลและกรดฟีนอลิก ซึ่งมีฤทธิ์ต้านอนุมูลอิสระ ต้านจุลินทรีย์ และต้านการอักเสบอย่างมีนัยสำคัญ<a href="#">Read More</a></p>
 			<p class="product-price">$39.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
     </div>
 	<section id="fruit" class="section">
@@ -636,7 +648,7 @@
         </div>
         <div class="product">
             <img src="https://ibio.co.th/products/image/catalog/Mind/Ingredients%20/fqxwjp.jpg">
-            <h3>Mangoteen</h3>
+            <h3>มัคคุด (สินค้ามีตามฤดูกาล)</h3>
 			<p style="text-align: left;">Crisp, fresh, and perfect for any occasion.<a href="#">Read More</a></p>
 			<p class="product-price">$00.99</p>
 			<a href="#" class="buy-now">Buy Now</a>
@@ -644,23 +656,23 @@
         <div class="product">
             <img src="https://f.btwcdn.com/store-43065/product/d63dc323-a5e1-d893-653b-6011024d8d53.jpg" alt="Mango">
             <h3>Mango</h3>
-			<p style="text-align: left;">Delicate and aromatic with a vibrant finish.<a href="#">Read More</a></p>
+			<p style="text-align: left;">Delicate and aromatic with a vibrant finish.<a href="#">อ่านบทความเพิ่มเติม</a></p>
 			<p class="product-price">$00.99</p>
-			<a href="#" class="buy-now">Buy Now</a>
+			<a href="#" class="buy-now">สั่งซื้อ</a>
         </div>
     </div>
 </section>
 <footer>
         <div class="footer-section">
             <h3>Contact Us</h3>
-            <p>International Shipping</p>
+            <p>บริการจัดส่งไปต่างประเทศ</p>
             <p>Address: Asia Bangkok, Thailand</p>
             <p>Phone: <a href="tel:+1234567890">+6689 693 1668</a></p>
             <p>Email: <a href="info@siam10.com">info@siam10.com</a></p>
         </div>
         <!-- Social Media Links -->
         <div class="footer-section">
-            <h3>Follow Us</h3>
+            <h3>Follow Us</h3> <p>ฝากติดตามสินค้าออแกนนิกส์ได้ที่นี่</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
                 <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
