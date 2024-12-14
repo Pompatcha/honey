@@ -139,7 +139,7 @@
             justify-content: center; /* Centers horizontally */
             align-items: center; /* Centers vertically */
             height: 5vh; /* Makes the container fill the entire viewport height */
-			background-color: #2B2B2B; /* Choose your background color */
+	    background-color: #2B2B2B; /* Choose your background color */
             color: white;  /* Text color inside the header */
 			padding-top: : 5px;
 		    padding-bottom: 5px;
@@ -154,18 +154,31 @@
             font-style: italic;
             color: #333;
             text-align: center;
-			margin: 10px 0;
+	    margin: 10px 0;
+	<script type="text/javascript">
+        function changeLanguage(language) {
+            let content = document.getElementById("content");
+            
+            if (language === "en") {
+                content.innerHTML = "Welcome to our website!";
+            } else if (language === "th") {
+                content.innerHTML = "ยินดีต้อนรับสู่เว็บไซต์ของเรา!";
+            } else if (language === "es") {
+                content.innerHTML = "¡Bienvenido a nuestro sitio web!";
+            }
+        }
+    </script>
     </style>
 <body>    
 	<div class="language-selector-container">
-    <label for="language-selector">Choose Language:</label>
-    <select id="language-selector" name="language">
-        <option value="en">English</option>
-        <option value="es">Espanol</option>
-        <option value="it">Italian</option>
-	    <option value="th">ภาษาไทย</option>
-	    <option value="JP">日本語</option>
-    </select>
+    <p>Select your language:</p>
+    <a href="#" onclick="changeLanguage('en')">English</a> | 
+    <a href="#" onclick="changeLanguage('th')">ภาษาไทย</a> | 
+    <a href="#" onclick="changeLanguage('es')">Español</a>
+
+    <div id="content">
+        <!-- Content will change based on the selected language -->
+        Welcome to our website!
 </div>
 	<div class="highlight-frame">
     <p>"🍷Wine and honey🐝 is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
