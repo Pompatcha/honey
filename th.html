@@ -13,3 +13,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ไวน์พรีเมี่ยมและน้ำผึ้ง ไวน์แดง ไวน์อิตาลี ไวน์นำเข้า ไวน์นอก น้ำผึ้งออร์แกนิก</title>
 	</head>
+<style>
+		/* Slider Container middle text */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 410px;  /* Adjust the height to fit your design */
+            overflow: hidden;
+            max-width: 1215px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+            width: 100%;
+        }
+		/* Each slide */
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+		.slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Text Overlay for Honey Slides */
+        .slide .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+			padding: 40px 40px;
+			padding-top: 400px;
+			height: 10vh;
+			text-shadow: 2px 2px 4px Black;
+        }
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        /* Dots for Navigation */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #FFD700; /* Golden color for active dot */
+        }
