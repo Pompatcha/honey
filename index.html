@@ -21,12 +21,23 @@
             width: 100%;
             height: 410px;  /* Adjust the height to fit your design */
             overflow: hidden;
-            max-width: 1215px;
-            height: 400px;
+            max-width: 1350px;
+            height: 430px;
             margin: auto;
             overflow: hidden;
             border-radius: 10px;
         }
+		.paddle{
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			width: 10%;
+			height: 10%;
+			background-color: #4D4B4B;
+			border-radius: 10px;
+			transform: translate(-50%,-50%);
+			transition: left 0.2s ease-in-out;
+		}
         .slider {
             display: flex;
             transition: transform 1s ease;
@@ -56,7 +67,7 @@
             font-size: 35px;
             font-weight: bold;
             text-align: center;
-			padding: 40px 40px;
+			padding: 20px 20px;
 			padding-top: 400px;
 			height: 10vh;
 			text-shadow: 2px 2px 4px Black;
@@ -181,6 +192,7 @@
             margin: auto;
             overflow: hidden;
             border-radius: 10px;
+			padding: 2px,2px,2px,2px;
         }
         /* Slides */
         .slides {
