@@ -478,7 +478,67 @@ textarea {
    display: inline-block;
    margin-bottom: 0px;
 }
-
+			.cart-item{
+				margin-bottom: 20px;
+				padding: 10px;
+				border: 1px solid #ccc;
+				display: flex;
+				justify-content: space-between;
+				align-items: center
+			}
+			.cart-item button {
+				background-color: red;
+				color: white;
+				border: none;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+			
+			/*Confirmation Dialog Styles */
+			.confirmation-dialog {
+				display: none;
+				position:fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: white;
+				padding: 20px;
+				border: 1px solid #CCC;
+				box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+				text-align: center;
+				z-index: 1000;
+			}
+			
+			/* Secondary Button Styling */
+			.button-secondary{
+				background-color: lightgray;
+				color: black;
+				border: 1px solid #ccc;
+				padding: 10px 20px;
+				cursor: pointer;			
+			}
+			
+			/* Confirmation Button Styling */
+			.button-confirm{
+				background-color: red;
+				color:white;
+				border: 1px solid #ccc;
+				padding: 10px 20px;
+				cursor: pointer;
+			}
+			
+			/* Background overlay */
+			.overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.5);
+				z-index: 999;
+			}
+			
 /* 6. Page Styles
 ======================================== */
 
@@ -713,7 +773,14 @@ textarea {
 											</div>
 											<div class="col-1-4 item-price">
 												<p>$14.99</p>
+												<button onclick="confirmDelete('Item 2')">Delete</button>
 											</div>
+										    <div class="confirmation-dialog">
+												<!--Dialog content here -->
+										</div>
+										<div class="confirmation-dialog button-secondary">
+												<!--Dialog content here -->
+										</div>
 										<!-- </div> -->
 									</li>
 									<li class="order-item clearfix">
@@ -731,6 +798,7 @@ textarea {
 											</div>
 											<div class="col-1-4 item-price">
 												<p>$19.99</p>
+												<button onclick="confirmDelete('Item 2')">Delete</button>
 											</div>
 										<!-- </div> -->
 									</li>
