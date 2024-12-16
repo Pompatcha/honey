@@ -3,28 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+    <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection">
+    <meta name="author" content="Patcharin Chanaphukdee">
+    <meta property="og:title" content="Premium Honey Collection">
+    <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+    <meta property="og:image" content="https://example.com/honey-image.jpg">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wine and Honey,Red wine, Honey organics</title>
+	</head>
+</html>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <style>
+		/* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			padding-top: 10px
+        }
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center;
+			font-size: 18px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00; /* Highlight on hover */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+			text-align: center;
+			font-size: 18px;
+        }
+        nav ul li {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+			font-size: 18px;
+			text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Show dropdown on hover */
+        nav ul li:hover > ul {
+            display: block;
+        }
+		/* Catalog Container */
+        .hero {
+            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+            height: 200px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 5.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .section {
+            padding: 10px;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-
         header {
-            background-color: #333;
+            background-color: white;
             color: #fff;
             padding: 10px 0;
-            text-align: center;
+            text-align: right;
         }
-
         nav {
             display: flex;
             justify-content: center;
             background-color: #444;
         }
-
         nav a {
             color: white;
             padding: 14px 20px;
@@ -36,7 +143,16 @@
             background-color: #ddd;
             color: black;
         }
-
+		.highlight-frame {
+            background: linear-gradient(to right, #fff5db, #f9f1c2);
+            border: 2px solid #e2b007;
+            padding: 5px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+			margin: 10px 0;
+		}
         .cart-container {
             width: 80%;
             margin: 30px auto;
@@ -44,26 +160,21 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .cart-container h2 {
             font-size: 1.8em;
             margin-bottom: 20px;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
         }
-
         table, th, td {
             border: 1px solid #ddd;
         }
-
         th, td {
             padding: 10px;
             text-align: left;
         }
-
         th {
             background-color: #f4f4f4;
         }
@@ -102,10 +213,131 @@
     </style>
 </head>
 <body>
-
 <header>
-    <h1>Comming Soon</h1>
+	<div class="language-selector-container">
+    <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a>| 
+    <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a>|
+　　　<a href="th.html" onclick="changeLanguage('th')">日本語🇯🇵</a>|
+　　　<a href="th.html" onclick="changeLanguage('th')">中国🇨🇳</a>|
+    <div id="content">
+</div>
+		<div class="highlight-frame">
+    <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+</div>
+    <h1>Shopping Cart</h1>
 </header>
+<header>
+	<nav>
+        <ul>
+		<li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#services">Wine</a>
+                <ul>
+                    <li><a href="buywine.html">Buy Wine</a></li>
+                    <li><a href="Wineclass.html">Wine Making</a></li>
+                    <li><a href="Winebenefit.html">Wine Benefit</a></li>
+                </ul>
+            </li>
+			<li>
+                <a href="#honey">Honey</a>
+                <ul>
+                    <li><a href="#Pine">Pine</a></li>
+                    <li><a href="#Flower">Flower</a></li>
+                    <li><a href="#Thyme">Thyme</a></li>
+					<li><a href="#Oak">Oak and Forest</a></li>
+					<li><a href="#Orange">Orange</a></li>
+                    <li><a href="#Fir">Fir</a></li>
+					<li><a href="#Vanilla">Vanilla</a></li>
+                </ul>
+            </li>
+			<li><a href="#Olive oil">Olive Oil</a></li>
+			<li><a href="#Coffee bean">Coffee bean</a></li>
+			<li><a href="#Cusmetic">Organic Cosmetic</a></li>
+			<li><a href="aboutus.html">About us</a></li>
+			<li>
+                <a href="#services">Contact</a>
+               <ul>
+                    <li><a href="#Wine-Shop">International Shipping</a></li>
+                </ul>
+    </nav>
+	</header>
+<div class="cart-container">
+    <h2>Your Cart</h2>
 
+    <!-- Cart Items Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product 1 -->
+            <tr>
+                <td>Product 1</td>
+                <td>$29.99</td>
+                <td>
+                    <input type="number" value="1" min="1" style="width: 50px;">
+                </td>
+                <td>$29.99</td>
+                <td><button class="btn">Remove</button></td>
+            </tr>
+
+            <!-- Product 2 -->
+            <tr>
+                <td>Product 2</td>
+                <td>$39.99</td>
+                <td>
+                    <input type="number" value="1" min="1" style="width: 50px;">
+                </td>
+                <td>$39.99</td>
+                <td><button class="btn">Remove</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+        <p><strong>Subtotal:</strong> $69.98</p>
+        <p><strong>Shipping:</strong> Free</p>
+        <p><strong>Total:</strong> $69.98</p>
+        <button class="btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+<footer>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>International Shipping</p>
+            <p>Address: Asia Bangkok, Thailand</p>
+            <p>Phone: <a href="tel:+1234567890">+6689 693 1668</a></p>
+            <p>Email: <a href="info@siam10.com">info@siam10.com</a></p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
+                <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
+                <a href="#" target="_blank">🐦 Twitter</a>
+                <a href="#" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+        <!-- Contact Form -->
+        <div class="footer-section">
+            <h3>Quick Contact</h3>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" requ
+</body>
+</html>					   
+</footer>
 </body>
 </html>
+	
+	
