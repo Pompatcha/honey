@@ -315,6 +315,40 @@
         <button class="btn">Proceed to Checkout</button>
     </div>
 </div>
+	<body>
+	<!-- JavaScript -->
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(id, name, price) {
+            // Add item to cart
+            cart.push({ id, name, price });
+            total += price;
+
+            // Update the cart UI
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total');
+
+            // Clear the cart items
+            cartItems.innerHTML = '';
+
+            // Rebuild the cart item list
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price}`;
+                cartItems.appendChild(li);
+            });
+
+            // Update total
+            totalElement.textContent = `Total: $${total}`;
+        }
+    </script>
+		</body>
 
 <footer>
         <!-- Social Media Links -->
