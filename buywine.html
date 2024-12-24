@@ -174,6 +174,16 @@
 		    background-color: white;
 		    padding: 10px;
 	    }
+        .right-align {
+		    text-align: right;
+		    background-color: white;
+		    padding: 10px;
+	    }
+        .center-align {
+		    text-align: center;
+		    background-color: white;
+		    padding: 10px;
+	    }
 	/* Colume wine paring>> Responsive hight Columns */
 		  .container {
             display: flex;
@@ -187,31 +197,20 @@
             border: 1px solid #ccc;
         }  
         table {
-            width: 80%;
+            width: 100%;
             margin: 0;
             border-collapse: collapse;
             background: #fff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        th, td {
-            padding: 5px;
-            text-align: left;
-            border: #333;
-            text-align: left;
+        th{
+            text-align:right; 
         }
-        th {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: white;
-            font-size: 17px;
-            text-align: left;
-        }
-        td {
-            border-bottom: 1px solid #f0f0f0;
-            color: #333;
-            font-size: 16px;
-            text-align: left;
+        td{
+            text-align:right;
         }
         .td-productlist{
           border-bottom: 1px solid #f0f0f0;
@@ -689,77 +688,70 @@
 		<div class="center-flex">
 	<h2>Pairing Wine with Food</h2>
 		</div>
-	<div style="text-align: left;">
-	<p>Perfect Pairings: Best Dishes to Enjoy with Our Bold Red Wines Content:
+	<p style="text-align: left;">Best Dishes to Enjoy with Our Bold Red Wines Content:
 "Looking for the perfect meal to accompany our Cabernet Sauvignon? Try pairing it with a rich, juicy steak or a creamy mushroom risotto. The tannins in the wine balance the fat in the meat, while the deep flavors of the red wine enhance the earthiness of the mushrooms. For a vegetarian option, roasted root vegetables with a balsamic glaze bring out the complexity in our red blend."</p>
 		</section>
-        <section>
             <div class="center-flex">
                 <h2>The Benefit of Wine</h2>     
             </div>
             <table>
                 <tr>
                   <th>No.</th>
-                  <th>Healthly benefit</th>
-                  <th>Journal</th>
-                  <th>Related reserach</th>
-            
+                  <th style="text-align: left;">Healthly</th>
+                  <th style="text-align: center;">Benefit</th>
+                  <th>Reference</th>
                 </tr>
                 <tr>
-                      <td>1</td>
-                      <td>Heart Health</td>
-                      <td>Improves Cholesterol Levels: Moderate consumption of red wine may help increase HDL (good cholesterol) and reduce LDL (bad cholesterol).
+                    <td style="text-align: center;">1</td>
+                      <td style="text-align: left;">Heart Health</td>
+                      <td style="text-align: left;">Improves Cholesterol Levels: Moderate consumption of red wine may help increase HDL (good cholesterol) and reduce LDL (bad cholesterol).
                         Reduces Risk of Heart Disease: The antioxidants in wine, particularly resveratrol, may protect the blood vessels and reduce the risk of cardiovascular disease.</td>
                     </td>
                     <td><button><a href="https://www.health.harvard.edu/blog/is-red-wine-good-actually-for-your-heart-2018021913285">Read more</a></button></td>
                 </tr>
             
                 <tr>
-                      <td>2</td>
-                      <td>Antioxidant Propertie</td>
-                      <td>Wine contains polyphenols, which can combat oxidative stress and reduce inflammation, potentially lowering the risk of chronic diseases like cancer and neurodegenerative conditions.</td>
+                    <td style="text-align: center;">2</td>
+                      <td style="text-align: left;">Antioxidant Propertie</td>
+                      <td style="text-align: left;">Wine contains polyphenols, which can combat oxidative stress and reduce inflammation, potentially lowering the risk of chronic diseases like cancer and neurodegenerative conditions.</td>
                       <td><button><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6099584/">Read more</a></button></td>
                 </tr>
             
                   <tr>
-                      <td>3</td>
-                      <td>Supports Brain Health</td>
-                      <td>Protects Against Cognitive Decline: Resveratrol in wine may help protect the brain from age-related degeneration and reduce the risk of Alzheimer's and dementia.</td>
+                    <td style="text-align: center;">3</td>
+                      <td style="text-align: left;"> Supports Brain Health</td>
+                      <td style="text-align: left;">Protects Against Cognitive Decline: Resveratrol in wine may help protect the brain from age-related degeneration and reduce the risk of Alzheimer's and dementia.</td>
                       <td><button><a href="https://www.urmc.rochester.edu/news/story/in-wine-theres-health-low-levels-of-alcohol-good-for-the-brain">Read more</a></button></td>
                   </tr>
             
                     <tr>
-                        <td>4</td>
-                        <td>May Improve Longevity</td>
-                        <td>Studies suggest moderate wine consumption is associated with longer life spans in populations with balanced diets, such as the Mediterranean diet.</td>
+                        <td style="text-align: center;">4</td>
+                        <td style="text-align: left;">May Improve Longevity</td>
+                        <td style="text-align: left;">Studies suggest moderate wine consumption is associated with longer life spans in populations with balanced diets, such as the Mediterranean diet.</td>
                         <td><button><a href="##">Read more</a></button></td>
                     </tr>
             
                       <tr>
-                        <td>5</td>
-                        <td>Potential Anti-Diabetic Effects</td>
-                        <td>Moderate wine consumption may improve insulin sensitivity, potentially reducing the risk of type 2 diabetes.</td>
+                        <td style="text-align: center;">5</td>
+                        <td style="text-align: left;">Potential Anti-Diabetic Effects</td>
+                        <td style="text-align: left;">Moderate wine consumption may improve insulin sensitivity, potentially reducing the risk of type 2 diabetes.</td>
                         <td><button><a href="##">Read more</a></button></td>
                         </tr>
             
                     <tr>
-                        <td>6</td>
-                        <td>Heart Health</td>
-                        <td>Red wine contains compounds that may promote the growth of beneficial gut bacteria, contributing to a healthier digestive system</td>
+                        <td style="text-align: center;">6</td>
+                        <td style="text-align: left;">Heart Health</td>
+                        <td style="text-align: left;">Red wine contains compounds that may promote the growth of beneficial gut bacteria, contributing to a healthier digestive system</td>
                         <td><button><a href="##">Read more</a></button></td>
                     </tr>
             
                     <tr>
-                        <td>7</td>
-                        <td>Stress Reduction</td>
-                        <td>A glass of wine in moderation can promote relaxation, potentially reducing stress and improving mental well-being.</td>
+                        <td style="text-align: center;">7</td>
+                        <td style="text-align: left;">Stress Reduction</td>
+                        <td style="text-align: left;">A glass of wine in moderation can promote relaxation, potentially reducing stress and improving mental well-being.</td>
                         <td><button><a href="##">Read more</a></button></td>
                   </tr>
               </table>
-        </section>
-
-        
-<section id="wines" class="section">
   <div class="center-flex">
         <h2>Our Premium Wine</h2>
 		</div>
