@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
     <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection">
+    <meta name="keywords" content="Coffee bean Thailand, Coffee bean honey wine from Thailand">
     <meta name="author" content="Patcharin Chanaphukdee">
     <meta property="og:title" content="Premium Honey Collection">
     <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
@@ -13,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Wine and Honey,Red wine, Honey organics</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
 	</head>
 </html>
     <style>
@@ -28,16 +30,16 @@
             overflow: hidden;
             border-radius: 10px;
         }
-		.paddle{
-			position: absolute;
-			top: 10%;
-			left: 10%;
-			width: 10%;
-			height: 10%;
-			background-color: #4D4B4B;
-			border-radius: 10px;
-			transform: translate(-50%,-50%);
-			transition: left 0.2s ease-in-out;
+	.paddle{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 10%;
+	height: 10%;
+	background-color: #4D4B4B;
+	border-radius: 10px;
+	transform: translate(-50%,-50%);
+	transition: left 0.2s ease-in-out;
 		}
         .slider {
             display: flex;
@@ -155,6 +157,89 @@
             text-align: center;
 			margin: 10px 0;
 		}
+	    .highlight-header {
+            background: linear-gradient(to right, #151106, #050504);
+            border: 2px solid #f9f8f5;
+            padding: 5px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #faf5f5;
+            text-align: center;
+			margin: 10px 0;
+		}
+        .highlight-header-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img{
+            height:40px;
+            width: auto;
+        }
+        .nav{
+            display: flex;
+        }
+        .nav-item{
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .nav-text{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        #search-bar{
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+        #search-button {
+            background-color: #febd69;
+            border: none;
+            padding: 8px;
+            margin-left: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-icon {
+            height: 20px;
+            width: auto;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .cart-text {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+
+        .cart-icon img {
+            height: 24px;
+            width: auto;
+            }
+
+        .cart-count {
+            background-color: #f08804;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            color: white;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
 	    /* content <p> */
 	    .left-align {
 		    text-align: left;
@@ -200,8 +285,41 @@
         <!-- Content will change based on the selected language -->
         Welcome to our website!
     </div>
-	<div class="highlight-frame">
+<div class="highlight-header">
     <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+
+</div>
+	<header class="highlight-header">
+        <div class="highlight-header-container"
+        <!-- Amazon Logo -->
+      <div class="logo">
+        <p>SiamWine</p>
+      </div>
+      
+      <!-- Navigation Bar -->
+      
+      </nav>
+      
+      <!-- Search Bar -->
+      <div class="search">
+        <input type="text" id="search-bar" placeholder="Search for products, brands and more" />
+        <button id="search-button">
+          <img src="https://www.reshot.com/preview-assets/icons/3GDBA5VEUP/search-3GDBA5VEUP.svg" alt="Search Icon" class="search-icon" />
+        </button>
+      </div>
+
+      <!-- Cart Icon -->
+      <div class="cart">
+        <span class="cart-text">Cart</span>
+        <div class="cart-icon">
+          <img src="https://www.reshot.com/preview-assets/icons/WFDT3CVZMJ/shopping-cart-WFDT3CVZMJ.svg" alt="Cart" />
+          <span class="cart-count" id="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="script.js"></script>
 </div>
 </body>
 <head>
@@ -608,6 +726,26 @@
     });
     // Initialize
     updateSlider(currentIndex);
+
+    <!-- Search and Cart Fuctionally -->
+    // script.js
+        document.getElementById("search-button").addEventListener("click", function() {
+        const query = document.getElementById("search-bar").value;
+        if (query) {
+            alert(`Searching for: ${query}`);
+            // Implement actual search functionality here
+        } else {
+            alert("Please enter a search term.");
+        }
+        });
+
+        // Cart Functionality (Simulating cart item count)
+        let cartCount = 0;
+
+        document.getElementById("cart-icon").addEventListener("click", function() {
+        cartCount++;
+        document.getElementById("cart-count").textContent = cartCount;
+        });
 </script>
 </header>
 <header>
