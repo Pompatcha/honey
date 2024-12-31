@@ -306,7 +306,15 @@
 
         </tbody>
     </table>
-
+	<script>
+    function removeRow(button) {
+        // Get the row that contains the button
+        var row = button.closest('tr');
+       
+        // Remove the row from the table
+        row.parentNode.removeChild(row);
+    }
+</script>
     <!-- Cart Summary -->
     <div class="cart-summary">
         <p><strong>Subtotal:</strong> $69.98</p>
