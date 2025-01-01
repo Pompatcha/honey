@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
     <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection">
     <meta name="keywords" content="Coffee bean Thailand, Coffee bean honey wine from Thailand">
@@ -15,6 +15,15 @@
     <title>Premium Wine and Honey,Red wine, Honey organics</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/amazon.css">
 	</head>
 </html>
     <style>
@@ -131,7 +140,7 @@
         .language-selector:focus {
             outline: none;
         }
-	.language-selector-container {
+	      .language-selector-container {
             font-family: Arial, sans-serif;
             text-align: right;
             margin-top: 20px;
@@ -287,7 +296,6 @@
     </div>
 <div class="highlight-header">
     <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
-
 </div>
 	<header class="highlight-header">
         <div class="highlight-header-container"
@@ -295,30 +303,42 @@
       <div class="logo">
         <p>SiamWine</p>
       </div>
-      
-      <!-- Navigation Bar -->
+<!-- Navigation Bar (original) -->
+      <body>
+        <div class="amazon-header">
+          <div class="amazon-header-left-section">
+            <a href="siam10winery.con" class="header-link">
+              <img class="amazon-logo"
+                src="https://i.ibb.co/yNNxBKJ/Screenshot-2567-12-28-at-22-51-58.png">
+              <img class="amazon-mobile-logo"
+                src="images/amazon-mobile-logo-white.png">
+            </a>
+          </div>
+    
+          <div class="amazon-header-middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+    
+            <button class="search-button">
+              <img class="search-icon" src="images/icons/search-icon.png">
+            </button>
+          </div>
+    
+          <div class="amazon-header-right-section">
+            <a class="orders-link header-link" href="orders.html">
+              <span class="returns-text">Returns</span>
+              <span class="orders-text">& Orders</span>
+            </a>
+    
+            <a class="cart-link header-link" href="Cart.html">
+              <img class="cart-icon" src="images/icons/cart-icon.png">
+              <div class="cart-quantity">3</div>
+              <div class="cart-text">Cart</div>
+            </a>
+          </div>
+        </div>
       
       </nav>
-      
-      <!-- Search Bar -->
-      <div class="search">
-        <input type="text" id="search-bar" placeholder="Search for products, brands and more" />
-        <button id="search-button">
-          <img src="https://www.reshot.com/preview-assets/icons/3GDBA5VEUP/search-3GDBA5VEUP.svg" alt="Search Icon" class="search-icon" />
-        </button>
-      </div>
-
-      <!-- Cart Icon -->
-      <div class="cart">
-        <span class="cart-text">Cart</span>
-        <div class="cart-icon">
-          <img src="https://www.reshot.com/preview-assets/icons/WFDT3CVZMJ/shopping-cart-WFDT3CVZMJ.svg" alt="Cart" />
-          <span class="cart-count" id="cart-count">0</span>
-        </div>
-      </div>
-    </div>
   </header>
-
   <script src="script.js"></script>
 </div>
 </body>
