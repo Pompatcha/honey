@@ -27,6 +27,40 @@
 	</head>
 </html>
     <style>
+        .language-selector {
+            background-color: #444;
+            color: white;
+            border: 1px solid #fff;
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+			position: absolute;
+			top: 15px;
+			right: 20px;
+        }
+        .language-selector option {
+            background-color: #333;
+            color: white;
+        }
+        .language-selector:focus {
+            outline: none;
+        }
+	    .language-selector-container {
+            font-family: Arial, sans-serif;
+            text-align: right;
+            margin-top: 20px;
+			margin-bottom: 20px;
+        }
+        label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        select {
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 		/* Slider Container middle text */
         .slider-container {
             position: relative;
@@ -39,16 +73,16 @@
             overflow: hidden;
             border-radius: 10px;
         }
-	.paddle{
-	position: absolute;
-	top: 10%;
-	left: 10%;
-	width: 10%;
-	height: 10%;
-	background-color: #4D4B4B;
-	border-radius: 10px;
-	transform: translate(-50%,-50%);
-	transition: left 0.2s ease-in-out;
+            .paddle{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 10%;
+            height: 10%;
+            background-color: #4D4B4B;
+            border-radius: 10px;
+            transform: translate(-50%,-50%);
+            transition: left 0.2s ease-in-out;
 		}
         .slider {
             display: flex;
@@ -122,40 +156,7 @@
         .active {
             background-color: #FFD700; /* Golden color for active dot */
         }
-        .language-selector {
-            background-color: #444;
-            color: white;
-            border: 1px solid #fff;
-            padding: 5px;
-            font-size: 1em;
-            border-radius: 5px;
-			position: absolute;
-			top: 15px;
-			right: 20px;
-        }
-        .language-selector option {
-            background-color: #333;
-            color: white;
-        }
-        .language-selector:focus {
-            outline: none;
-        }
-	      .language-selector-container {
-            font-family: Arial, sans-serif;
-            text-align: right;
-            margin-top: 20px;
-			margin-bottom: 20px;
-        }
-        label {
-            font-size: 1.2em;
-            margin-right: 10px;
-        }
-        select {
-            padding: 5px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+        
 	    .highlight-frame {
             background: linear-gradient(to right, #fff5db, #f9f1c2);
             border: 2px solid #e2b007;
@@ -285,6 +286,7 @@
 	}
     </style>
 <body>    
+  
 	<div class="language-selector-container">
     <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a>| 
     <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a>|
@@ -298,23 +300,20 @@
     <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
 </div>
 	<header class="highlight-header">
-        <div class="highlight-header-container"
+        
         <!-- Amazon Logo -->
       <div class="logo">
-        <p>SiamWine</p>
+        
       </div>
 <!-- Navigation Bar (original) -->
       <body>
-        <div class="amazon-header">
-          <div class="amazon-header-left-section">
+          <div class="amazon-header-middle-section">
             <a href="siam10winery.con" class="header-link">
               <img class="siam10winery-logo"
                 src="https://i.ibb.co/yNNxBKJ/Screenshot-2567-12-28-at-22-51-58.png">
               <img class="siam10winery-mobile-logo"
                 src="images/siam10winery-mobile-logo-white.png">
             </a>
-          </div>
-    
           <div class="amazon-header-middle-section">
             <input class="search-bar" type="text" placeholder="Search">
     
