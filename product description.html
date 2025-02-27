@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Container */
+.container {
+   margin: 200px auto 0; /* Added 200px margin-top to push content down */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Row 1 Layout */
+.row-1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Left Section - Main Photo + Sub Photos */
+.left {
+    flex: 2; /* Make the left section larger */
+}
+
+.main-photo {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+/* Right Section - Product Info */
+.right {
+    flex: 1; /* Make the right section smaller */
+    max-width: 300px;
+}
+
+.product-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    display: block;
+    padding: 10px 20px;
+    background-color: #B22222;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #8B0000;
+}
+
+/* Product Description */
+.product-description {
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Product List Slider */
+.product-slider {
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+
+.product-slider .slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.product-slide {
+    min-width: 200px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.product-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-slide p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+</style>
+<script>
+    let slideIndex = 0;
+let productIndex = 0;
+
+// Main photo slider
+function moveSlide(n) {
+    let slides = document.getElementsByClassName("slide");
+    slideIndex += n;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    document.querySelector(".slider-container").style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+// Product list slider (auto-scroll for demonstration)
+setInterval(() => {
+    let productSlides = document.getElementsByClassName("product-slide");
+    productIndex++;
+    if (productIndex >= productSlides.length) {
+        productIndex = 0;
+    }
+    document.querySelector(".product-slider .slider-container").style.transform = `translateX(-${productIndex * 220}px)`;
+}, 3000);
+
+</script>
+
+<body>
+<div class="container">
+    <!-- Row 1 -->
+    <div class="row-1">
+        <!-- Left Section (Main Photo + Sub Photos) -->
+        <div class="left">
+            <!-- Main Photo with Slider -->
+            <div class="main-photo">
+                <div class="slider-container">
+                    <div class="slide">
+                        <img src="photo1.jpg" alt="Photo 1">
+                    </div>
+                    <div class="slide">
+                        <img src="photo2.jpg" alt="Photo 2">
+                    </div>
+                    <div class="slide">
+                        <img src="photo3.jpg" alt="Photo 3">
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Right Section (Product Info) -->
+        <div class="right">
+            <h2 class="product-name">Premium Wine</h2>
+            <p class="price">$99.99</p>
+            <label for="quantity">Quantity:</label>
+            <select id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="750ml">750ml</option>
+                <option value="1L">1L</option>
+                <option value="1.5L">1.5L</option>
+            </select>
+            <a href="shoppingcart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+
+    <!-- Product Description -->
+    <div class="product-description">
+        <h3>Description</h3>
+        <p>This is a premium wine made with the finest grapes...</p>
+    </div>
+
+    <!-- Product List Slider -->
+    <div class="product-slider">
+        <div class="slider-container">
+            <!-- Product 1 -->
+            <div class="product-slide">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-slide">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Product 2</p>
+</body>
+</html>

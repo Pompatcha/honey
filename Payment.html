@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+    <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection">
+    <meta name="keywords" content="Coffee bean Thailand, Coffee bean honey wine from Thailand">
+    <meta name="author" content="Patcharin Chanaphukdee">
+    <meta property="og:title" content="Premium Honey Collection">
+    <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+    <title>Premium Wine and Honey,Red wine, Honey organics</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;            
+        }
+        /* Language Dropdown Container */
+        .language-dropdown {
+            position: absolute;
+            display: inline-block;
+            z-index: 500;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Button Styling */
+        .dropdown-btn {
+            background-color: #39393a;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 260px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Dropdown Content Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(49, 47, 47);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            min-width: 200px;
+            text-align: left;
+            padding: 10px 0;
+            cursor: pointer;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Show dropdown on hover */
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown List */
+        .dropdown-content a {
+            color: rgb(255, 245, 245);
+            padding: 12px 20px;
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: #3498db;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 0px;
+            text-align: center;
+			padding-top: 5px 5px 5px;
+            margin: 10px 10px 10px;
+            width: auto;
+        }
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center; /* Fallback for non-flex environments */
+            font-size: 18px;
+            display: flex;
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers items vertically */
+            height: 60px; /* Optional: Adjust height for better alignment */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00; /* Highlight on hover */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+			text-align: center;
+			font-size: 18px;
+        }
+        nav ul li {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+			font-size: 18px;
+			text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Show dropdown on hover */
+        nav ul li:hover > ul {
+            display: block;
+         }
+          /* About our product.conteainer head */
+        .center-flex {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: auto; /* Makes the container fill the entire viewport height */
+	        background-color: #2B2B2B; /* Choose your background color */
+            color: white;  /* Text color inside the header */
+			padding-top: : 5px;
+		    padding-bottom: 5px;
+            text-align: center;
+			margin: 20px 0; 
+        }
+          /* Colume Flex boxes */
+        .flex-container {
+            display: flex;
+            justify-content: space-between; /* Adjusts spacing between items */
+            gap: 20px; /* Adds spacing between flex items */
+                    }
+
+            .flex-item {
+                flex: 1; /* Each item takes up equal space */
+                min-width: 0; /* Prevents overflow */
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background: #fbfaf6;
+                text-align: start; /*text inside */
+            }
+            /* Special advertising banner on the right */
+            .flex-item.banner {
+                flex: 2; /* Makes the banner larger */
+                max-width: 700px; /* Ensures it doesn't get too big */
+                background: #ffe4b5; /* Light warm color for visibility */
+                text-align: center;
+                font-weight: bold;
+                order: 1; /* Moves the banner to the right */
+            }
+		       //* Payment form*//
+               {
+            font-family: Arial, sans-serif;
+            margin: 20px 20px 20px;
+            padding: 20px 20px 20px;
+            background-color: #f8f8f8;
+            max-width: 400px;
+            margin: auto;
+                }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin: 10px 10px 5px;
+            }
+
+             input, select {
+            width: 100%; /* Ensures full width of container */
+            max-width: 100%; /* Prevents inputs from exceeding container width */
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            }
+
+        .hidden {
+            display: none;
+        }
+        .payment-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+            padding: 8px 12px;
+        }
+        /* Improve spacing for payment method fields */
+        #credit-card-form, #cash-transfer-info, #paypal-info, #wise-info {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #d4b483;
+            border-radius: 5px;
+            background: #fedb89;
+        }
+        .highlight-frame {
+            width: 100%;
+            align-items: center;
+            background: linear-gradient(to right, #fff5db, #f9f1c2);
+            border: 2px solid #e2b007;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+            margin-top: 90px; /* Space below the dropdown */
+            position: relative; /* Ensures it stays below dropdown */
+    
+        }  
+            /* Cart Summary */
+            .cart-summary {
+                margin-top: 30px;
+                text-align: right;
+                font-size: 1.2em;
+            }
+
+            .cart-summary p {
+                margin: 5px 0;
+            }
+
+            /* Cart Styling */
+            .cart {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .cart-text {
+                font-size: 14px;
+                margin-right: 5px;
+            }
+
+            .cart-icon img {
+                height: 24px;
+                width: auto;
+            }
+
+            .cart-count {
+                background-color: #f08804;
+                border-radius: 50%;
+                padding: 2px 6px;
+                font-size: 12px;
+                color: white;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+            }
+            .remove-btn {
+                color: red;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            /* Table Styling */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid #ddd;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            /* Right Column (Cart Table) */
+            .cart-container {
+                width: auto;
+                background: white;
+                padding: 20px;
+                margin: 40px auto;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                margin-top: 20px;
+                min-height: 400px;
+            }
+            /* Flex Item 3: Delivery Information Section */
+            .delivery-info {
+                flex: 1; /* Takes available space */
+                width: 100%;
+                background: #f8f9fa; /* Light gray background */
+                padding: 0px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                font-size: 14px;
+                color: #333;
+                margin-top: 100px; /* Space below cart-container */
+                margin-bottom: 30px; /* Space before checkout button */
+                text-align: start;
+            }        
+            //*botton checkout*//
+                .button-container {
+                position: absolute;
+                top: 30%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                }
+                /* Button styling */
+            .btn {
+                display: flex;
+                justify-content: center;  /* Centers text horizontally */
+                background-color: #e2b007; /* Set button background color */
+                color: white; /* White text for contrast */
+                padding: 12px 24px; /* Comfortable padding */
+                border: none;
+                border-radius: 6px; /* Smooth rounded edges */
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            /* Style for all buttons */
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+                background-color: #e2b007; /* Blue background */
+                color: white; /* White text */
+                border: none; /* No border */
+                border-radius: 5px; /* Rounded corners */
+                cursor: pointer; /* Pointer cursor on hover */
+                margin: 5px; /* Add space between buttons */
+                transition: background-color 0.3s, transform 0.1s; /* Smooth transition */
+                cursor: pointer;
+            }
+
+                /* Hover effect */
+                button:hover {
+                    background-color: #e2b007; /* Darker blue on hover */
+                    transform: scale(1.05); /* Slightly enlarge */
+                }
+
+            /* Active (clicked) effect */
+            button:active {
+                background-color: #e2b007; /* Even darker blue */
+                transform: scale(0.98); /* Slightly shrink when clicked */
+            }
+
+            /* Disabled button */
+            button:disabled {
+                background-color: black; /* Gray background */
+                color: #666666; /* Darker text */
+                cursor: not-allowed; /* Disable cursor */
+            }
+    </style>
+    </head>
+<body>    
+    <!-- Language Dropdown -->
+    <div class="language-dropdown">
+        <button class="dropdown-btn">🌍 Select Language</button>
+        <div class="dropdown-content">
+            <a href="index.html" onclick="changeLanguage('en')">🇺🇸 English</a>
+            <a href="th.html" onclick="changeLanguage('th')">🇹🇭 ภาษาไทย</a>
+            <a href="jp.html" onclick="changeLanguage('jp')">🇯🇵 日本語</a>
+            <a href="cn.html" onclick="changeLanguage('cn')">🇨🇳 中国</a>
+        </div>  
+    </div>
+    
+<div class="highlight-frame">
+    <p>"Wine and honey is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+</div>
+        <section style="text-align: center;">
+            <h4>Siam Wine &Honey (Health in the world) </h4>
+      </div>
+   
+<!-- Navigation Bar (original) -->
+      <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="wine.html">Wine</a>
+                        <ul>
+                            <li><a href="buywine.html">Buy Wine</a></li>
+                            <li><a href="Wineclass.html">Wine Class</a></li>
+                            <li><a href="Winebenefit.html">Wine Benefit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#honey">Honey</a>
+                        <ul>
+                            <li><a href="#Pine">Pine</a></li>
+                            <li><a href="#Flower">Flower</a></li>
+                            <li><a href="#Thyme">Thyme</a></li>
+                            <li><a href="#Oak">Oak and Forest</a></li>
+                            <li><a href="#Orange">Orange</a></li>
+                            <li><a href="#Fir">Fir</a></li>
+                            <li><a href="#Vanilla">Vanilla</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#services">Olive oil</a>
+                        <ul>
+                            <li><a href="#Pine">Skin Care</a></li>
+                        </ul>
+                        <li>
+                            <a href="#honey">Our Shop</a>
+                            <ul>
+                                <li><a href="##">Bangkok</a></li>
+                                <li><a href="##">Pattaya</a></li>
+                                <li><a href="##">Chaing Mai</a></li>
+                                <li><a href="##">Phuket</a></li>
+                                <li><a href="##">Krabi</a></li>
+                                <li><a href="##">Prachinburi</a></li>
+                                <li><a href="##">Hua Hin</a></li>
+                            </ul>
+                        </li>           
+                    <li>
+                        <a href="#services">Contact</a>
+                        <ul>
+                            <li><a href="aboutus.html">About us</a></li>
+                            <li><a href="#Pine">International Shipping</a></li>
+                        </ul>
+            </nav>
+            </header>
+            <div class="center-flex">
+                <h3><marquee direction="left">Dear customer, we are acceptable an order via Line offcial and What's app (add) me +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.<a href="https://lin.ee/RBnKOuz">Click Here</a></marquee></h3>
+            </div>
+            <div class="flex-container">
+                <!-- Left Column: Shipping & Payment -->
+                <div class="flex-item">
+<h2>Shipping Information</h2>
+<label for="shipping-name">Full Name</label>
+<input type="text" id="shipping-name" placeholder="Enter your full name" required style="width: 100%; max-width: 450px;">
+<label for="shipping-email">Email</label>
+<input type="email" id="shipping-email" placeholder="Enter your email" required style="width: 100%; max-width: 450px;">
+<label for="shipping-phone">Phone</label>
+<input type="tel" id="shipping-phone" placeholder="Enter your phone number with country code" required style="width: 100%; max-width: 450px;">
+<label for="shipping-address">Address</label>
+<input type="text" id="shipping-address" placeholder="Enter your address" required style="width: 100%; max-width: 450px;">
+<label for="shipping-postcode">Post Code</label>
+<input type="text" id="shipping-postcode" placeholder="Enter post code" required style="width: 100%; max-width: 450px;">
+<label for="shipping-country">Country </label>
+<select id="country">
+    <option value="">Select Country</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="BE">Belgium</option>
+    <option value="BR">Brazil</option>
+    <option value="KH">Cambodia</option>
+    <option value="CA">Canada</option>
+    <option value="CN">China</option>
+    <option value="CO">Colombia</option>
+    <option value="CR">Costa Rica</option>
+    <option value="HR">Croatia</option>
+    <option value="DK">Denmark</option>
+    <option value="DE">Germany</option>
+    <option value="HU">Hungary</option>
+    <option value="IS">Iceland</option>
+    <option value="ID">Indonesia</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italy</option>
+    <option value="JP">Japan</option>
+    <option value="KW">Kuwait</option>
+    <option value="LA">Laos</option>
+    <option value="MY">Malaysia</option>
+    <option value="MV">Maldives</option>
+    <option value="MX">Mexico</option>
+    <option value="MN">Mongolia</option>
+    <option value="MA">Morocco</option>
+    <option value="MM">Myanmar</option>
+    <option value="NL">Netherlands</option>
+    <option value="NZ">New Zealand</option>
+    <option value="KP">North Korea</option>
+    <option value="MK">North Macedonia</option>
+    <option value="NO">Norway</option>
+    <option value="PK">Pakistan</option>
+    <option value="PE">Peru</option>
+    <option value="PH">Philippines</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="QA">Qatar</option>
+    <option value="RU">Russia</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="SG">Singapore</option>
+    <option value="ZA">South Africa</option>
+    <option value="KR">South Korea</option>
+    <option value="SS">South Sudan</option>
+    <option value="ES">Spain</option>
+    <option value="SE">Sweden</option>
+    <option value="CH">Switzerland</option>
+    <option value="TW">Taiwan</option>
+    <option value="TH">Thailand</option>
+    <option value="TR">Turkey</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="GB">United Kingdom</option>
+    <option value="US">United States</option>
+    <option value="VN">Vietnam</option>
+</select>
+
+<h2>Payment Method</h2>
+
+<label for="payment-method">Choose Payment Method</label>
+<select id="payment-method" onchange="togglePaymentFields()">
+    <option value="">Select Payment Method</option>
+    <option value="cash-transfer">Cash Transfer</option>
+    <option value="credit-card">Credit Card</option>
+    <option value="paypal">PayPal</option>
+    <option value="wise">Wise</option>
+</select>
+
+<!-- Credit Card Form -->
+<div id="credit-card-form" class="hidden">
+    <h3>Credit Card Details</h3>
+    <label for="card-number">Card Number</label>
+    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+    <label for="expiry-date">Expiry Date</label>
+    <input type="month" id="expiry-date" required>
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" placeholder="123" required>
+</div>
+
+<!-- Cash Transfer Info -->
+<div id="cash-transfer-info" class="hidden">
+    <h3>Bank Transfer Details</h3>
+    <p><strong>Bank Name:</strong> Kasikorn Thai</p>
+    <p><strong>Account Number:</strong> 720-21495-84</p>
+    <p><strong>SWIFT Code:</strong> KASITHBKXXX</p>
+    <p>*Important*<br>Attach transfer Slip after transferred <br>to confirm your order for develivery</p>
+</div>
+
+<!-- PayPal Payment -->
+<div id="paypal-info" class="hidden">
+    <h3>Pay with PayPal</h3>
+    <a href="https://www.paypal.com" target="_blank" class="payment-link">Pay with PayPal</a>
+</div>
+
+<!-- Wise Payment -->
+<div id="wise-info" class="hidden">
+    <h3>Pay with Wise</h3>
+    <a href="https://wise.com" target="_blank" class="payment-link">Pay with Wise</a>
+</div>
+<div><button>Submited</button></div>
+<div>
+    <button onclick="printForm()">Print</button>
+    <button onclick="downloadPDF()">Download as PDF</button>
+</div>
+
+</div>
+
+
+<script>
+function togglePaymentFields() {
+var paymentMethod = document.getElementById("payment-method").value;
+
+// Hide all payment sections first
+document.getElementById("credit-card-form").classList.add("hidden");
+document.getElementById("cash-transfer-info").classList.add("hidden");
+document.getElementById("paypal-info").classList.add("hidden");
+document.getElementById("wise-info").classList.add("hidden");
+
+// Show the selected payment section
+if (paymentMethod === "credit-card") {
+    document.getElementById("credit-card-form").classList.remove("hidden");
+} else if (paymentMethod === "cash-transfer") {
+    document.getElementById("cash-transfer-info").classList.remove("hidden");
+} else if (paymentMethod === "paypal") {
+    document.getElementById("paypal-info").classList.remove("hidden");
+} else if (paymentMethod === "wise") {
+    document.getElementById("wise-info").classList.remove("hidden");
+}
+}
+</script>
+<script>
+function printForm() {
+    window.print(); // Print the current page
+}
+
+function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    html2canvas(document.querySelector(".container")).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const imgWidth = 190;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+        doc.save("payment_form.pdf");
+    });
+}
+</script>
+<!-- Right Column: Cart -->
+<div class="flex-item">
+    <h2>Your Cart</h2>
+       <!-- Cart Items Table -->
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </table>
+            <!-- Product 1-Cart items will be displayed here -->
+            <!-- Link to external JavaScript file -->
+
+            <div id="cartTotal">
+                <h3>Total: $<span id="totalPrice">0.00</span></h3>
+            
+                <div class="button-container">
+                    <a href="shoppingcart.html" class="btn"><span>Edit order (Back to shopping list)</span></a>
+                  </div>
+            
+
+  <script src="cartScript.js"></script></div>
+        
+        <!-- Delivery Information Section -->
+    <div class="delivery-info">
+        <h3>Delivery Information</h3>
+        <p>✔ Standard delivery: 3-5 business days.</p>
+        <p>✔ Express delivery: 1-2 business days.</p>
+        <p>✔ Free shipping for orders over $100.</p>
+        <p>✔ Deliveries are made between 9 AM - 6 PM.</p>
+        <p>✔ For more details, please visit our <a href="#">Shipping Policy</a>.</p>
+    </div>
+    </div>
+</div>
+<!-- Button Below Both Sections -->
+<div class="checkout-button-container">
+    <button type="submit" class="payment-btn">Proceed to Payment</button>
+</div>
+            </div>
+            </form>
+        </div>
+        
+        <script src="paymentScript.js"></script>
+        <div class="flex-container">
+            <div class="flex-item">Bussiness partner @us</div>
+            <div class="flex-item banner">🚀 Inquiry to add order 🚀</div>
+            <div class="flex-item">Bussiness partner @us</div>
+        </div>
+        
+    <section>
+			<div class="center-flex">
+            <h2>Contact us</h2>
+            <p>I© 2024 Pure Healthy Living. All rights reserved. Read our Privacy Policy or unsubscribe from our newsletter. <a href="#">get in touch</a>.</p>
+        </div>
+    </section>		    
+</body>
+</html>

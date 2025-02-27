@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a premium honey collection website offering the finest quality honey.">
+        <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection, coffee bean Thailand, honey wine">
+        <meta name="author" content="Patcharin Chanaphukdee">
+        <!-- Open Graph Meta Tags (for social sharing) -->
+        <meta property="og:title" content="Premium Honey Collection">
+        <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+        <title>Premium Wine and Honey | Red Wine | Organic Honey</title>
+        <!-- Google Fonts - Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/shared/general.css">
+    </head>
+
+    <style>
+        /* Language Dropdown Container */
+        .language-dropdown {
+            position: absolute;
+            display: inline-block;
+            z-index: 500;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Button Styling */
+        .dropdown-btn {
+            background-color: #39393a;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 260px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Dropdown Content Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(49, 47, 47);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            min-width: 200px;
+            text-align: left;
+            padding: 10px 0;
+            cursor: pointer;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Show dropdown on hover */
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown List */
+        .dropdown-content a {
+            color: rgb(255, 245, 245);
+            padding: 12px 20px;
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: #3498db;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+		/* Slider Container middle text */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 410px;  /* Adjust the height to fit your design */
+            overflow: hidden;
+            max-width: 1215px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+            width: 100%;
+        }
+		/* Each slide */
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+		.slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Text Overlay for Honey Slides */
+        .slide .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+			padding: 40px 40px;
+			padding-top: 400px;
+			height: 10vh;
+			text-shadow: 2px 2px 4px Black;
+        }
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        /* Dots for Navigation */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #FFD700; /* Golden color for active dot */
+        }
+        
+        /* Description of benefits */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #800020; /* Deep red background */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .benefits-list li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+        .benefit-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #800020;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .benefit-text {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .important-notes {
+            margin-top: 30px;
+            background-color: #f8f3e7;
+            padding: 15px;
+            border-left: 5px solid #d2b49c;
+        }
+        .important-notes h2 {
+            color: #800020;
+            font-size: 1.5em;
+        }
+
+	     /* About our product.conteainer head */
+        .center-flex {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: auto; /* Makes the container fill the entire viewport height */
+	        background-color: #2B2B2B; /* Choose your background color */
+            color: white;  /* Text color inside the header */
+			padding-top: : 5px;
+		    padding-bottom: 5px;
+            text-align: center;
+			margin: 20px 0; 
+        }
+	    .highlight-frame {
+            background: linear-gradient(to right, #fff5db, #f9f1c2);
+            border: 2px solid #e2b007;
+            padding: 5px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+	        margin: 10px 0;
+            font-size: medium;
+            margin-top: 5ch;
+
+	/* content <p> */
+	    .left-align {
+		    text-align: center;
+		    background-color: white;
+		    padding: 10px;
+            justify-content: start;
+            align-items: center;
+    
+	    }
+        
+        .center-align {
+		    text-align: center;
+		    background-color: white;
+		    padding: 10px;
+	    }
+	/* Colume wine paring>> Responsive hight Columns */
+		  .container {
+            display: flex;
+            gap: 20px;  /* Adds space between columns */
+        }
+        .column {
+            height: 350px;  /* Set fixed height for each column */
+            width: 350px;  /* Set a width for the column */
+            background-color: lightgray;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }  
+        table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        th{
+            text-align:right; 
+        }
+        td{
+            text-align:right;
+        }
+        .td-productlist{
+          border-bottom: 1px solid #f0f0f0;
+          color: #333;
+          text-align: center;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        tr:hover {
+            background: #f1f1f1;
+        }
+        button{
+          size: 8px;
+          width: 90px;
+        }  
+    </style>
+<body>    
+	 <!-- Language Dropdown -->
+     <div class="language-dropdown">
+        <button class="dropdown-btn">🌍 Select Language</button>
+        <div class="dropdown-content">
+            <a href="index.html" onclick="changeLanguage('en')">🇺🇸 English</a>
+            <a href="th.html" onclick="changeLanguage('th')">🇹🇭 ภาษาไทย</a>
+            <a href="jp.html" onclick="changeLanguage('jp')">🇯🇵 日本語</a>
+            <a href="cn.html" onclick="changeLanguage('cn')">🇨🇳 中国</a>
+        </div>  
+    </div>
+    <div class="content"
+        <!-- Content will change based on the selected language -->
+        <p>Welcome to our website!</p>
+</div>
+	<div class="highlight-frame">
+    <p>"🍷Wine and honey🐝 is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
+</div>
+</body>
+<head>
+    <style>
+        /* Slider container */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1215px;
+            height: 550px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        /* Slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        /* Each slide */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dots navigation */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: white;
+        }
+        /* Basic Styling */
+        body 
+		{
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+		/* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			padding-top: 10px;
+        }
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center; /* Fallback for non-flex environments */
+            font-size: 18px;
+            display: flex;
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers items vertically */
+            height: 60px; /* Optional: Adjust height for better alignment */
+        }
+                nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00; /* Highlight on hover */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 5px 10px;
+            display: flex;
+			text-align: center;
+			font-size: 18px;
+            justify-content: start; /* Centers horizontally */
+           
+        }
+        nav ul li {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+			font-size: 18px;
+			text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+            
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Show dropdown on hover */
+        nav ul li:hover > ul {
+            display: block;
+        }
+		h2 {
+			text-align: center;
+            justify-content: center;
+            align-items: center;
+		}
+		
+        section {
+            margin-bottom: 5px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        /* General Container */
+        .container {
+          margin: 200px auto 0; /* Added 200px margin-top to push content down */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Row 1 Layout */
+        .row-1 {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Left Section - Main Photo + Sub Photos */
+        .left {
+            flex: 2; /* Make the left section larger */
+            margin-left: 8%;
+        }
+
+        .main-photo {
+            position: relative;
+            max-width: 500px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            align-items: center;
+            
+        }
+        /* Right Section - Product Info */
+        .right {
+            flex: 1; /* Make the right section smaller */
+            max-width: 300px;
+            margin-right: 15%;
+        }
+
+        .product-name {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            margin-right: 100px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        .add-to-cart {
+            display: block;
+            padding: 10px 20px;
+            background-color: #B22222;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #8B0000;
+        }
+        /* Wine pairing recommendation header */
+        .wine-pairing-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f3e7; /* Light beige background */
+            border-bottom: 2px solid #d2b49c; /* Subtle border with a warm tone */
+            margin-bottom: 30px; /* Space below the header */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Wine pairing header text styles */
+        .wine-pairing-header h2 {
+            font-size: 2em;
+            color: #5a2a1c; /* Deep wine red color */
+            font-family: 'Georgia', serif; /* Elegant serif font */
+            margin-bottom: 10px;
+        }
+
+        .wine-pairing-header p {
+            font-size: 1.1em;
+            color: #6c4f3d; /* Softer brown color */
+            font-family: 'Arial', sans-serif; /* Clean sans-serif font for readability */
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Product List Slider header */
+        .product-slider-header {
+            text-align: center;
+            padding: 15px;
+            background-color: #f8f3e7; /* Similar background color */
+            border-bottom: 2px solid #d2b49c; /* Border for visual consistency */
+            margin-bottom: 20px; /* Space below the header */
+        }
+
+        .product-slider-header h3 {
+            font-size: 1.8em;
+            color: #5a2a1c; /* Same wine red for uniformity */
+            font-family: 'Georgia', serif;
+            margin: 0;
+        }
+
+        /* Product Slider container styles */
+        .product-slider {
+            margin-top: 40px;
+            overflow-x: hidden;
+        }
+
+        .product-slider .slider-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 20px; /* Added gap between the product slides */
+        }
+
+        .product-slide {
+            min-width: 200px;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        
+        }
+
+        .product-slide img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product-slide p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        	 /* footer */
+           footer {
+            background: #e2b007;
+            color: #fff;
+            align-items: center;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            height: 20vh;
+            margin: 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            text-align: center; /* Ensures text inside is centered */
+        }
+
+            .footer-container {
+                display: flex;
+                flex-direction: row; /* Stack items vertically */
+                justify-content: center;
+                align-items: center; /* Center horizontally */
+                max-width: 1200px;
+                margin: 0px auto;
+                font-size: medium;
+                text-align: center; /* Ensures text is centered */
+                font-size: 16px;
+            }
+            .footer-section {
+                    margin: 0;
+                    padding: 1px 0;  /* Reduced padding to make it more compact */
+                }
+            .footer-section h3 {
+                font-size: 18px;
+          color: #000000;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #e2b007;
+                padding-bottom: 5px;
+            }
+            .footer-section p, .footer-section a {
+                font-size: 14px;
+                line-height: 1.8;
+                color: #000000;
+                text-decoration: none;
+            }
+            .social-icons a {
+                display: inline-block;
+                margin-right: 10px;
+                color: #000000;
+                font-size: 18px;
+            }
+           
+           
+        </style>
+</head>
+<body>
+    <h2> Natrual Product 100% by Siam10 (Healthy and Wellness)</h2>
+	 <div class="slider">
+    <!-- Slides container -->
+    <div class="slides">
+        <div class="slide">
+            <img src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
+			</div>
+		<div class="slide">
+            <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
+        </div>
+		 <div class="slide">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
+        </div>
+		<div class="slide">
+            <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
+        </div>
+		<div class="slide">
+            <img src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
+        </div>
+		<div class="slide">
+            <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
+        </div>
+    </div>
+    <!-- Navigation buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Dots navigation -->
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    // Update the slider
+    function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Navigate to the next slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Navigate to the previous slide
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Automatic sliding
+    let autoSlide = setInterval(nextSlide, 3000);
+
+    // Pause auto sliding on user interaction
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider(index);
+            resetAutoSlide();
+        });
+    });
+    // Initialize
+    updateSlider(currentIndex);
+</script>
+</header>
+<header>
+	<nav>
+        <ul>
+			<li><a href="index.html">Home</a></li>
+            <li>
+                <a href="wine.html">Wine</a>
+                <ul>
+                    <li><a href="buywine.html">Buy Wine</a></li>
+                    <li><a href="Wineclass.html">Wine Class</a></li>
+                    <li><a href="Winebenefit.html">Wine Benefit</a></li>
+                </ul>
+            </li>
+			<li>
+                <a href="#honey">Honey</a>
+                <ul>
+                    <li><a href="#Pine">Pine</a></li>
+                    <li><a href="#Flower">Flower</a></li>
+                    <li><a href="#Thyme">Thyme</a></li>
+					<li><a href="#Oak">Oak and Forest</a></li>
+					<li><a href="#Orange">Orange</a></li>
+                    <li><a href="#Fir">Fir</a></li>
+					<li><a href="#Vanilla">Vanilla</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#services">Olive oil</a>
+                <ul>
+                    <li><a href="#Pine">Skin Care</a></li>
+                </ul>
+                <li>
+                    <a href="#honey">Our Shop</a>
+                    <ul>
+                        <li><a href="##">Bangkok</a></li>
+                        <li><a href="##">Pattaya</a></li>
+                        <li><a href="##">Chaing Mai</a></li>
+                        <li><a href="##">Phuket</a></li>
+                        <li><a href="##">Krabi</a></li>
+                        <li><a href="##">Prachinburi</a></li>
+                        <li><a href="##">Hua Hin</a></li>
+                    </ul>
+                </li>           
+            <li>
+                <a href="#services">Contact</a>
+                <ul>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="#Pine">International Shipping</a></li>
+                </ul>
+    </nav>
+	</header>
+	<main>
+    <div class="center-flex">
+      <h3><marquee direction="left">Dear customer, we are acceptable an order via Line offcial and What's app (add) me +6689 693 1668 ;Payment Online development is on proces. acceptable by credit card.<a href="https://lin.ee/RBnKOuz">Click Here</a></marquee></h3>
+  </div>
+  
+	<div class="container">
+    <!-- Row 1 -->
+    <div class="row-1">
+        <!-- Left Section (Main Photo + Sub Photos) -->
+        <div class="left">
+            <!-- Main Photo with Slider -->
+            <div class="main-photo">
+                <div class="slider-container">
+                    <div class="slide">
+                        <img src="https://i.ibb.co/zH53T1c1/Designer-5.jpg" alt="redwine">
+                    </div>
+                    <div class="slide">
+                        <img src="https://th.bing.com/th/id/R.9c67ed9090cbd8ca37db836a1c61e2c6?rik=cNyPfKyv18Bm%2bA&pid=ImgRaw&r=0" alt="Pairwine">
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        <script>
+        // Main photo slider
+              function moveSlide(n) {
+                  let slides = document.getElementsByClassName("slide");
+                  slideIndex += n;
+                  if (slideIndex >= slides.length) {
+                      slideIndex = 0;
+                  }
+                  if (slideIndex < 0) {
+                      slideIndex = slides.length - 1;
+                  }
+                  document.querySelector(".slider-container").style.transform = `translateX(-${slideIndex * 100}%)`;
+              }
+            </script>
+
+        <!-- Right Section (Product Info) -->
+        <div class="right">
+            <h2 class="product-name">Premium Wine</h2>
+            <p class="price">$44.99</p>
+            <label for="quantity">Quantity:</label>
+            <select id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="750ml">750ml</option>
+                <option value="1L">1L</option>
+                <option value="1.5L">1.5L</option>
+            </select>
+            <a href="shoppingcart.html" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+
+    <!-- Product Description -->
+        <header>
+            <h1>Health Benefits of Red Wine</h1>
+        </header>
+        <div class="container">
+            <p>Red wine, when consumed in moderation, can offer several potential health benefits, thanks to its content of antioxidants and other beneficial compounds. Some of the notable benefits of red wine include:</p>
+            <ul class="benefits-list">
+                <li>
+                    <div class="benefit-icon">1</div>
+                    <div class="benefit-text">Rich in Antioxidants</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">2</div>
+                    <div class="benefit-text">Heart Health</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">3</div>
+                    <div class="benefit-text">Improved Cholesterol Levels</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">4</div>
+                    <div class="benefit-text">Anti-Aging Properties</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">5</div>
+                    <div class="benefit-text">Reduced Risk of Type 2 Diabetes</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">6</div>
+                    <div class="benefit-text">Brain Health</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">7</div>
+                    <div class="benefit-text">Reduced Risk of Stroke</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">8</div>
+                    <div class="benefit-text">Gut Health</div>
+                </li>
+                <li>
+                    <div class="benefit-icon">9</div>
+                    <div class="benefit-text">Stress Reduction</div>
+                </li>
+            </ul>
+    
+            <div class="important-notes">
+                <h2>Important Notes:</h2>
+                <ul>
+                    <li><strong>Moderation is Key:</strong> The benefits of red wine are generally associated with moderate consumption. This typically means one glass per day for women and up to two glasses per day for men.</li>
+                    <li><strong>Excessive Drinking Can Be Harmful:</strong> Drinking too much red wine can lead to negative health effects, such as liver damage, increased risk of certain cancers, and high blood pressure.</li>
+                    <li><strong>Consult a Doctor:</strong> If you have specific health conditions or concerns, it's important to consult with a healthcare professional before incorporating red wine into your routine.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-slider">
+        <!-- New Header for Product List -->
+        <div class="product-slider-header">
+            <h3>Wine Pairing Food Ideas</h3>
+            <p>Explore perfect food pairings to enjoy with our exquisite wines!</p>
+        </div>
+    
+        <div class="slider-container">
+            <!-- Product 1 -->
+            <div class="product-slide">
+                <img src="https://th.bing.com/th/id/OIP.egAjRCIgH3QB0l48eI5vXAHaEO?rs=1&pid=ImgDetMain" alt="WinePair">
+                <p>Paring with Steak</p>
+            </div>
+    
+            <!-- Product 2 -->
+            <div class="product-slide">
+                <img src="https://foodfornet.com/wp-content/uploads/Wine-Pairing-with-Asian-Food-v2-400x400.png" alt="Cocktails Wine">
+                <p>Verity asia food</p>
+            </div>
+    
+            <!-- Product 3 -->
+            <div class="product-slide">
+                <img src="https://www.usnews.com/object/image/0000017a-a116-d748-affb-a1d6c9480001/210713-migraine3-stock.jpg?update-time=1626200287826&size=responsive640" alt="Cocktails Wine">
+                <p>Hot pot style</p>
+            </div>
+    
+            <!-- Product 4 -->
+            <div class="product-slide">
+                <img src="https://toxigon.com/image/holiday-wine-pairing-guide-dinner-table-jpg.webp?thumb=1" alt="Cocktails Wine">
+                <p>Party</p>
+            </div>
+          
+
+    
+            
+</body>
+</html>

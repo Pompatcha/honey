@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="เว็บไซต์นี้เป็นศูนย์รวมน้ำผึ้งระดับพรีเมียมที่นำเสนอน้ำผึ้งคุณภาพดีที่สุด">
+        <meta name="keywords" content="premium honey, natural honey, pure honey, honey collection, coffee bean Thailand, honey wine">
+        <meta name="author" content="Patcharin Chanaphukdee">
+        <!-- Open Graph Meta Tags (for social sharing) -->
+        <meta property="og:title" content="Premium Honey Collection">
+        <meta property="og:description" content="Explore our premium honey collection, made from nature's finest sources.">
+        <meta property="og:image" content="https://example.com/honey-image.jpg">
+        <title>สยามเท็นไวน์รี่ ไวน์แดง น้ำผึ้งแท้จากธรรมชาติ น้ำผึ้งจากดอกไม้ |น้ำผึ้งต้นส้ม|น้ำผึ้งเป็นยา|น้ำหวาน|แทนน้ำตาล|น้ำผึ้งเพื่อสุขภาพ</title>
+        <!-- Google Fonts - Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/shared/general.css">
+    </head>
+</html>
+    <style>
+		/* Slider Container middle text */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 410px;  /* Adjust the height to fit your design */
+            overflow: hidden;
+            max-width: 1350px;
+            height: 430px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+            width: 100%;
+        }
+		/* Each slide */
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+		.slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Text Overlay for Honey Slides */
+        .slide .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+			padding: 20px 20px;
+			padding-top: 400px;
+			height: 10vh;
+			text-shadow: 2px 2px 4px Black;
+        }
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        /* Dots for Navigation */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #FFD700; /* Golden color for active dot */
+        }
+        .language-selector {
+            background-color: #444;
+            color: white;
+            border: 1px solid #fff;
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+			position: absolute;
+			top: 15px;
+			right: 20px;
+        }
+        .language-selector option {
+            background-color: #333;
+            color: white;
+        }
+        .language-selector:focus {
+            outline: none;
+        }
+	.language-selector-container {
+            font-family: Arial, sans-serif;
+            text-align: right;
+            margin-top: 20px;
+			margin-bottom: 20px;
+        }
+        label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        select {
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+         /* About our product.conteainer head */
+         .center-flex {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: auto; /* Makes the container fill the entire viewport height */
+	        background-color: #2B2B2B; /* Choose your background color */
+            color: white;  /* Text color inside the header */
+			padding-top: : 5px;
+		    padding-bottom: 5px;
+            text-align: center;
+			margin: 20px 0; 
+        }
+	    .highlight-frame {
+            background: linear-gradient(to right, #fff5db, #f9f1c2);
+            border: 2px solid #e2b007;
+            padding: 5px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+			margin: 10px 0;
+		}
+	    /* content <p> */
+	    .left-align {
+		    text-align: left;
+		    background-color: white;
+		    padding: 10px;
+	    }
+        .center-align {
+		    text-align: center;
+		    background-color: white;
+		    padding: 10px;
+	    }
+        /* Colume wine paring>> Responsive hight Columns */
+		  .container {
+            display: flex;
+            gap: 20px;  /* Adds space between columns */
+        }
+        .column {
+            height: 350px;  /* Set fixed height for each column */
+            width: 350px;  /* Set a width for the column */
+            background-color: lightgray;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }  
+        table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        th{
+            text-align:right; 
+        }
+        td{
+            text-align:right;
+        }
+        .td-productlist{
+          border-bottom: 1px solid #f0f0f0;
+          color: #333;
+          text-align: center;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        tr:hover {
+            background: #f1f1f1;
+        }
+        button{
+          size: 8px;
+          width: 90px;
+        }  
+    </style>
+<body>    
+	<div class="language-selector-container">
+    <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a> | 
+    <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a> | 
+    <a href="jp.html" onclick="changeLanguage('es')">日本語🇯🇵</a>　| 
+　　　<a href="#" onclick="changeLanguage('es')">中国🇨🇳</a>　| 　
+    <div id="content">
+        <!-- Content will change based on the selected language -->
+        ยินดีต้อนรับสู่เว็ปไซส์ของเรา!
+    </div>
+	<div class="highlight-frame">
+    <p>"ไวน์และน้ำผึ้งคือทองคำแห่งธรรมชาติ—บริสุทธิ์ เป็นธรรมชาติ และเต็มไปด้วยคุณสมบัติในการเสริมสร้างชีวิต"</p>
+</div>
+</body>
+<head>
+    <style>
+        /* Slider container */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1215px;
+            height: 550px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+			padding: 2px,2px,2px,2px;
+        }
+        /* Slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        /* Each slide */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+			padding: 5px,5px,5px,5px;
+        }
+        /* Navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dots navigation */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: white;
+        }
+        /* Basic Styling */
+        body 
+		{
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+		/* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			padding-top: 10px
+        }
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center; /* Fallback for non-flex environments */
+            font-size: 18px;
+            display: flex;
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers items vertically */
+            height: 60px; /* Optional: Adjust height for better alignment */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00; /* Highlight on hover */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+			text-align: center;
+			font-size: 18px;
+        }
+        nav ul li {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+			font-size: 18px;
+			text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+            
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Show dropdown on hover */
+        nav ul li:hover > ul {
+            display: block;
+        }
+		/* Catalog Container */
+        .hero {
+            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+            height: 200px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 5.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .section {
+            padding: 10px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+			color: #333;
+			border-color: burlywood
+        }
+        .product {
+            background: #f8f1e1;
+            border: 1px solid #d4b483;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+		}
+        
+		main {
+            padding: 20px;
+        }
+		h2 {
+			text-align: center;
+		}
+		
+        section {
+            margin-bottom: 5px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+		 /* footer */
+         footer {
+            background: #e2b007;
+            color: #fff;
+            align-items: center;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            height: 20vh;
+            margin: 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            text-align: center; /* Ensures text inside is centered */
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row; /* Stack items vertically */
+            justify-content: center;
+            align-items: center; /* Center horizontally */
+            max-width: 1200px;
+            margin: 0px auto;
+            font-size: medium;
+            text-align: center; /* Ensures text is centered */
+            font-size: 16px;
+        }
+        .footer-section {
+                margin: 0;
+                padding: 1px 0;  /* Reduced padding to make it more compact */
+            }
+        .footer-section h3 {
+            font-size: 18px;
+			color: #000000;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2b007;
+            padding-bottom: 5px;
+        }
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #000000;
+            text-decoration: none;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #000000;
+            font-size: 18px;
+        }
+        /* Button */
+        .buy-now {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #2F4F4F;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .buy-now:hover {
+			   background-color: #2F4F4F;
+        }  
+		.center-image {
+            display: block;         /* Makes the image a block element */
+            margin: 0 auto;         /* Centers the image horizontally */
+		
+		}
+    </style>
+</head>
+<body>
+	<header>
+    <h1> ผลิตภัณฑ์ธรรมชาติ 100% โดย สยามเท็น (สุขภาพและความสมบูรณ์ของร่างกาย)</h1>
+	 <div class="slider">
+    <!-- Slides container -->
+    <div class="slides">
+        <div class="slide">
+            <img src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
+			</div>
+		<div class="slide">
+            <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
+        </div>
+		 <div class="slide">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
+        </div>
+		<div class="slide">
+            <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
+        </div>
+		<div class="slide">
+            <img src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
+        </div>
+		<div class="slide">
+            <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
+        </div>
+    </div>
+    <!-- Navigation buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Dots navigation -->
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    // Update the slider
+    function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Navigate to the next slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Navigate to the previous slide
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Automatic sliding
+    let autoSlide = setInterval(nextSlide, 3000);
+
+    // Pause auto sliding on user interaction
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider(index);
+            resetAutoSlide();
+        });
+    });
+    // Initialize
+    updateSlider(currentIndex);
+</script>
+</header>
+<header>
+	<nav>
+        <ul>
+			<li><a href="index.html">Home</a></li>
+            <li>
+                <a href="wine.html">Wine</a>
+                <ul>
+                    <li><a href="buywine.html">Buy Wine</a></li>
+                    <li><a href="Wineclass.html">Wine Class</a></li>
+                    <li><a href="Winebenefit.html">Wine Benefit</a></li>
+                </ul>
+            </li>
+			<li>
+                <a href="#honey">Honey</a>
+                <ul>
+                    <li><a href="#Pine">Pine</a></li>
+                    <li><a href="#Flower">Flower</a></li>
+                    <li><a href="#Thyme">Thyme</a></li>
+					<li><a href="#Oak">Oak and Forest</a></li>
+					<li><a href="#Orange">Orange</a></li>
+                    <li><a href="#Fir">Fir</a></li>
+					<li><a href="#Vanilla">Vanilla</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#services">Olive oil</a>
+                <ul>
+                    <li><a href="#Pine">Skin Care</a></li>
+                </ul>
+                <li>
+                    <a href="#honey">Our Shop</a>
+                    <ul>
+                        <li><a href="##">Bangkok</a></li>
+                        <li><a href="##">Pattaya</a></li>
+                        <li><a href="##">Chaing Mai</a></li>
+                        <li><a href="##">Phuket</a></li>
+                        <li><a href="##">Krabi</a></li>
+                        <li><a href="##">Prachinburi</a></li>
+                        <li><a href="##">Hua Hin</a></li>
+                    </ul>
+                </li>           
+            <li>
+                <a href="#services">Contact</a>
+                <ul>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="#Pine">International Shipping</a></li>
+                </ul>
+    </nav>
+	</header>
+	<main>
+        <div class="center-flex">
+            <h3><marquee direction="left">เรียนท่านลูกค้าที่เคารพ เนื่องจากระบบการชำระเงินออนไลน์กำลังปรับปรุง ท่านสามารถสั่งสินค้าผ่านทางไลน์(Line official)หากต้องการสอบถามข้อมูลติดต่อ 081 8486123<a href="https://lin.ee/RBnKOuz">คลิกที่นี่</a></marquee></h3>
+        </div>
+        <section id="about">
+            <h2>เกี่ยวกับเรา</h2>
+		<div class="left-align">
+            <p> สยามเท็นร่วมมือกับฝ่ายนวัตกรรมเพื่อระดมสมอง วิจัย และประเมินแนวคิดผลิตภัณฑ์ ทั้งเอเซียและยุโรป นานาประชาชาติ จัดการโครงการตั้งแต่การคิดค้นและพัฒนาจนถึงการเปิดตัวสู่ตลาด ดำเนินการทดสอบวิทยาศาสตร์อาหาร รวมถึงการทดสอบความเสถียรและอายุการเก็บรักษา เพื่อให้แน่ใจว่าผลิตภัณฑ์มีความสมบูรณ์ มีคุณภาพ และเป็นไปตามมาตรฐานการกำกับดูแล ฉันรักการทำงานกับธรรมชาติ มีร่างกายที่สมบูรณ์และมีสุขภาพดี <a href="#">Read More</a></p>
+		</div>
+	</section>
+	
+	<div class="center-flex">
+        <h2>อาหารคือยา</h2>
+		</div>
+	<div style="text-align: left;">
+	<p> ประวัติบริษัท Siam10Winery บริษัทที่ก่อตั้งโดย พัชรินทร์ ชนะภักดี ฉันอาศัยอยู่ในกรุงเทพฯ ประเทศไทย ในเอเชียตะวันออกเฉียงใต้ (ที่ดินของฉันมีต้นกำเนิดจากสุวรรณภูมิ "ดินแดนแห่งทองคำ") ทำงานกับหุ่นยนต์เครื่องจักรกลการเกษตรโดยเฉพาะ ฉันมีประสบการณ์ในการทำงานกับธุรกิจโลกาภิวัตน์มาเป็นเวลา 19 ปี และสำเร็จการศึกษาปริญญาโทสาขาบริหารธุรกิจจากมหาวิทยาลัยนานาชาติสแตมฟอร์ด (ประเทศไทย) และทำงานเป็นผู้เชี่ยวชาญด้านการปฏิบัติตามกฎระเบียบและการจัดการด้านสิ่งแวดล้อมอย่างยั่งยืน มีชุมชนสังคมขนาดใหญ่มาเป็นเวลา 19 ปี บริษัท Siam10 กำลังเริ่มดำเนินโครงการเพื่อส่งเสริมความยั่งยืนด้านสิ่งแวดล้อมสำหรับการใช้ชีวิต ในระหว่างที่ฉันทุ่มเทให้กับงานทุกอย่าง ชีวิตมนุษย์อาจเผชิญกับเรื่องราวเลวร้ายที่เกือบทำให้ฉันไม่อยู่ในโลกนี้ ฉันพบกับคนติดเหล้าและส่งผลกระทบต่อจิตใจของฉันมากมาย ฉันไม่ใช่คนดื่มเหล้าหรือแอลกอฮอล์ แต่สิ่งเหล่านี้เกิดจากคนรอบข้าง สิ่งเลวร้ายทำลายจิตใจและความรู้สึกของฉันในทางที่เลวร้าย ขาดสามัญสำนึก ขาดความรับผิดชอบ ขาดความตระหนักรู้ ทำให้ผู้คนกลายเป็นปีศาจร้าย ฉันรู้สึกกระสับกระส่ายทางจิตใจและไม่เข้าใจว่ามันคืออะไร มันทำให้ฉันมีสภาพร่างกายที่กระทบกระเทือนจิตใจ ครอบครัวของฉันให้กำลังใจและเป็นห่วงว่าเกิดอะไรขึ้นกับฉัน พวกเขาพยายามช่วยให้ฉันเข้าใจสิ่งเลวร้ายที่เกิดขึ้น แล้ววันหนึ่งฉันก็ได้พบกับคนเลี้ยงผึ้งชาวแถบทะเลเมติเตอร์เรเรียน ทำให้ฉันรู้สึกสงบและปลอดภัย แต่ในขณะนั้นฉันรู้สึกขาดสามัญสำนึกมาก แต่นั่นคือจุดเริ่มต้นที่ฉันเริ่มศึกษาเรื่องนั้นและหลงใหลในความสงบสุขและธรรมชาติที่กลับคืนสู่ความงดงามอีกครั้ง ฉันสนุกกับผึ้ง น้ำผึ้ง และธรรมชาติของป่าดงดิบที่อยู่รอบตัวฉัน ฉันรู้สึกมีความสุขกับธรรมชาติ และธรรมชาตินี้เองเริ่มรักษาความรู้สึกและอารมณ์ของฉันได้ดีขึ้นเรื่อยๆ ฉันกินยานอนหลับเพราะฉันมีปัญหานอนไม่หลับ ฉันรู้ว่าการใช้ยาปฏิชีวนะไม่ดีต่อร่างกายของฉัน ดังนั้น ฉันจึงทดลองทำแอลกอฮอล์ธรรมชาติโดยใช้องุ่นและน้ำผึ้ง ฉันศึกษาขั้นตอนการผลิตไวน์โบราณจากชาวเมติเตอร์เรเนียนอย่างละเอียดและลองทุกขั้นตอนด้วยความเอาใจใส่และสนใจ รวมถึงการทดลองทางวิทยาศาสตร์ด้วย เพื่อให้มั่นใจว่าไวน์นั้นปลอดภัยต่อการดื่มและไม่เป็นอันตรายต่อร่างกาย ฉันพบว่าฉันนอนหลับสบายขึ้น จิตใจสงบขึ้น สามารถเลือกทานอาหารที่มีประโยชน์ต่อร่างกายได้ดีขึ้น นั่นเป็นจุดเริ่มต้นที่จิตสำนึกของฉันกลับมาใช้งานได้ตามปกติอีกครั้ง เพราะยังมีเรื่องราวอีกมากมายบนโลกใบนี้ที่ฉันยังไม่เคยพบเจอ ฉันจึงอยากแบ่งปันอาหารและสุขภาพที่ดีให้กับผู้อื่นเช่นกัน นั่นคือเหตุผลที่ Siam 10 Winery and Honey จึงก่อตั้งขึ้นในปัจจุบัน</p>
+		<h4>สำรวจผลิตภัณฑ์และบริการที่ดีที่สุดที่ออกแบบมาเพื่อเพิ่มความสง่างาม น้ำผึ้งเป็นสารให้ความหวานจากธรรมชาติที่มีประโยชน์ต่อสุขภาพมากมาย น้ำผึ้งอุดมไปด้วยสารต้านอนุมูลอิสระและสารอาหาร ถูกใช้มานานหลายศตวรรษทั้งในการทำอาหารและเพื่อวัตถุประสงค์ทางการแพทย์ อาหารสีเขียวมักเป็นผัก ผลไม้ หรือพืชที่มีสีเขียวตามธรรมชาติเนื่องจากมีคลอโรฟิลล์ในปริมาณสูง ซึ่งเป็นเม็ดสีที่ทำให้เกิดสี อาหารเหล่านี้มักอุดมไปด้วย:</h4>
+		<ul>
+    <li>วิตามิน (เอ, ซี, เค, โฟเลต)</li>
+    <li>แร่ธาตุ (เหล็ก, แมกนีเซียม, โพแทสเซียม)</li>
+    <li>ไฟเบอร์</li>
+    <li>วิตามินต่าง ๆ จากธรรมชาติล้วนๆ </li>
+    <li>ในน้ำผึ้งและไวน์สารต้านอนุมูลอิสระ (เช่น ลูทีน และ ซีแซนทีน)</li>
+</ul>
+	<p>เหตุใดจึงต้องรับประทานน้ำผึ้ง?<a href="more-about-honey.html">อ่านเพิ่มเติม</a></p>
+	</div>
+	
+	<h2>ความแตกต่างระหว่างไวน์แดงและไวน์ขาว<b>bold</b> text.</h2>
+	<img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589226174810-0MI7LST26KC0PUGAZGD1/red-wine-vs-white-wine2.png?format=2500w" alt="Centered Image" width="450" height="200" style="display: block; margin: 0 auto;">
+	<div class="left-align">
+		<p>ไวน์ขาวกับไวน์แดงอาจมีข้อแตกต่างใหญ่ๆ หลายประการ ซึ่งอาจส่งผลต่อความชอบของคุณสำหรับผู้เริ่มต้น ไวน์เหล่านี้ทำมาจากองุ่นที่มีสีต่างกัน ไวน์แดงใช้องุ่นแดงเท่านั้น ในขณะที่ไวน์ขาวใช้องุ่นขาวเป็นหลัก และบางครั้งก็เป็นองุ่นแดงหรือชมพูอมเทา แต่กระบวนการหมักก็มีความแตกต่างที่สำคัญเช่นกัน ซึ่งส่งผลต่อรสชาติ ไวน์แดงผลิตจากองุ่นที่มีเปลือกติดอยู่ระหว่างการหมัก ในขณะที่ไวน์ขาวผลิตจากองุ่นที่มีเปลือกถูกลอกออกก่อนการหมัก ไวน์ขาวยังได้รับการบ่มด้วยวิธีที่แตกต่างกัน โดยไวน์ขาวจะบ่มในถังเหล็กหรือถังเหล็ก ในขณะที่ไวน์แดงมักจะบ่มในถังไม้โอ๊ก ภาชนะที่ใช้บ่มไวน์จะส่งผลต่อการไหลเวียนของอากาศและความเป็นกรดของไวน์ ผลลัพธ์ก็คือไวน์แดงจะมีความนุ่มนวล เข้มข้น และซับซ้อนกว่า ในขณะที่ไวน์ขาวมักจะมีความกรอบกว่า หวานกว่าเล็กน้อย และมีความเป็นกรดสูงกว่า ไวน์ยังมีแทนนิน ซึ่งเป็นส่วนหนึ่งของประสบการณ์การดื่มไวน์ แทนนินเป็นสาเหตุของความรู้สึกแห้งที่หลังลิ้นเมื่อคุณดื่มไวน์ หากคุณชอบประสบการณ์นั้น คุณอาจจะชอบไวน์แดงที่มีแทนนินสูงกว่า แต่ถ้าคุณไม่ชอบหรือมีความไวต่อแทนนิน คุณอาจชอบไวน์ขาวมากกว่า<br>นอกจากนี้ ยังมีผลไม้ตระกูลเบอร์รี่หรือส้มให้พิจารณาด้วย ไวน์แดงมักจะมีกลิ่นเบอร์รี่ที่เข้มข้นกว่า เช่น ราสเบอร์รี่ เชอร์รี่ และสตรอว์เบอร์รี่ ส่วนไวน์ขาวจะมีกลิ่นอ่อนๆ เช่น บลูเบอร์รี่ แบล็กเบอร์รี่ และแบล็กเคอแรนต์ รสชาติของไวน์ขาวจะใช้กลิ่นส้ม แอปเปิล พีช และผลไม้รสอ่อนอื่นๆ มากกว่า พร้อมกลิ่นดอกไม้หอมๆ นอกจากนี้ ไวน์แดงยังเป็นไวน์ที่คุณจะได้กลิ่นดินที่เข้มข้นและกลิ่นรองของช็อกโกแลต ไม้ ยาสูบ และเครื่องเทศ ความรู้สึกของคุณเกี่ยวกับปัจจัยใดๆ เหล่านี้อาจเป็นเหตุผลที่คุณชอบปัจจัยหนึ่งมากกว่าอีกปัจจัยหนึ่ง แต่หากคุณกำลังมองหาความหมายที่ลึกซึ้งกว่าสำหรับความชอบของคุณ บุคลิกภาพของคุณก็อาจส่งผลต่อการเลือกของคุณได้เช่นกัน จากการสำรวจที่ดำเนินการโดย OnePoll สำหรับ Coravin ในเดือนพฤษภาคม 2019 พบว่าผู้ที่ดื่มไวน์แดงและผู้ที่ชอบไวน์ขาวมีลักษณะบุคลิกภาพที่แตกต่างกัน นี่คือสิ่งที่พวกเขาพบ</p>
+	</div>
+    <section id="honey" class="section">
+        <div class="center-flex">
+            <h2>น้ำผึ้งสีทองเมดิเตอร์เรเนียน</h2>
+    </div>
+            <!-- Product 1 -->
+        <div class="products">
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s" alt="red wine" height="50">
+                <h3>Red Wine</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">เข้มข้นและโดดเด่นด้วยสัมผัสแห่งความล้ำสมัย</p>
+                <p style="text-align: center;">ขนาด : 750 มล.</p>
+                        <a href="buywine.html">อ่านเพิ่มเติม</a></p>
+                <p class="product-price">$55.20</p>
+                <div class="products">
+                    <select id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="products">
+                <div class="product">
+                    <img src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg" alt="yellow Wine">
+                    <h3>ไวน์และน้ำผึ้งคือทองคำแห่งธรรมชาติ—บริสุทธิ์</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p style="text-align: left;">มีสง่า งดงาม ดุลทองคำ ดื่มอมตะในทุกโอกาส</p>
+                <p style="text-align: center;">ขนาด : 750 มล.</p>
+                    <a href="buywine.html">อ่านเพิ่มเติม</a></p>
+                <p class="product-price">$47.00</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://mybartender.com/wp-content/uploads/2023/11/refreshing-hibiscus-cocktail.png" alt="Cocktail Hibis Wine"> 
+                    <h3>ค็อกเทลไวน์ดอกชบา</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+                    <p style="text-align: left;">กลิ่นดอกไม้ธรรมชาติ ลุ่มหลงในธรรมชาติอันงดงาม</p>
+                    <p style="text-align: center;">ขนาด : 750 มล.</p>
+                        <a href="buywine.html">อ่านเพิ่มเติม</a></p>
+                    <p class="product-price">$40.00</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+            </div>
+            </div>
+            <!-- Product 4 De-->
+            <div class="products">
+                <div class="product">
+                    <img src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg" alt="Rosé Wine">
+                    <h3>ไวน์โรเซ่</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                    <p style="text-align: left;">ละเอียดอ่อนและมีกลิ่นหอมพร้อมกับความรู้สึกสดชื่น</p>
+                    <p style="text-align: center;">ขนาด : 750 มล.</p>
+                        <a href="buywine.html">อ่านเพิ่มเติม</a></p>
+                    <p class="product-price">$46.00</p>
+                <div class="products">
+                    <select id="quantity">
+                <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ขนาด : 450 กรัม</a>
+            </div>
+        </div>
+    </section>
+    <section id="honey" class="section">
+        <div class="center-flex">
+            <h2>น้ำผึ้งสีทองเมดิเตอร์เรเนียน</h2>
+    </div>
+            <!-- Product 5 -->
+        <div class="products">
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
+                <h3>Pine Honey</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">น้ำผึ้งสน Aydın บริสุทธิ์จากธรรมชาติที่จะพาคุณเดินทางไปยังป่าสนอันเป็นเอกลักษณ์ของ Aydın ด้วยรสชาติและกลิ่นอันเป็นเอกลักษณ์</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                    <a href="buywine.html">อ่านเพิ่มเติม</a></p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
+                <h3>Flower Honey</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">น้ำผึ้งประเภทนี้ได้มาจากน้ำหวานจากดอกไม้</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
+                <h3>Thyme Honey</h3>
+                <p style="text-align: left;">น้ำผึ้งไธม์เป็นดอกโหรพาฝรั่งเป็นน้ำผึ้งชนิดพิเศษเนื่องจากมีรสชาติเผ็ดร้อนและมีสรรพคุณพิเศษต่อสุขภาพ</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+            </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="products">
+                <div class="product">
+              <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt="Oak Honey">
+                <h3>Oak and Forest</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+                <p style="text-align: left;">กลิ่นหอมเฉพาะตัวของไม้และรสชาติเข้มข้น เป็นน้ำผึ้งที่โดดเด่นด้วยคุณค่าสารต้านอนุมูลอิสระและแร่ธาตุสูง</p>
+                <p style="text-align: center;">Size : 450 g.</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ขนาด : 450 กรัม</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="honey" class="section">
+        <div class="center-flex">
+            <h2>น้ำผึ้งป่า ไพรเขียวบริสุทธิ์</h2>
+    </div>
+            <!-- Product 9 -->
+        <div class="products">
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
+                <h3>พายน้ำผึ้ง</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;"> สินค้ากำลังเข้าใหม่</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                <p class="product-price">$00.99</p>
+                <div class="products">
+                    <select id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+              </div>
+            </div>
+            <!-- Product 10 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
+                <h3>น้ำผึ้งจากดอกไม้นานาพันธุ์</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">น้ำผึ้งประเภทนี้ได้มาจากน้ำหวานจากดอกไม้</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+                </div>
+            </div>
+            <!-- Product 11 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
+                <h3>น้ำผึ้งไธม์เป็นดอกโหรพาฝรั่ง</h3>
+                <p style="text-align: left;">น้ำผึ้งไธม์เป็นดอกโหรพาฝรั่งเป็นน้ำผึ้งชนิดพิเศษเนื่องจากมีรสชาติเผ็ดร้อนและมีสรรพคุณพิเศษต่อสุขภาพ</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+            </div>
+            </div>
+            <!-- Product 12 -->
+            <div class="products">
+                <div class="product">
+                    <img src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" alt="Vanilia Honey">
+                    <h3>"ไข่มุก "น้ำผึ้งเฟอร์"</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+                <p style="text-align: left;">น้ำผึ้งไข่มุก อร่อย แนะนำมากๆ กลิ่นหอมเฉพาะตัวของไม้และรสชาติเข้มข้น เป็นน้ำผึ้งที่โดดเด่นด้วยคุณค่าสารต้านอนุมูลอิสระและแร่ธาตุสูง</p>
+                <p style="text-align: center;">ขนาด : 450 กรัม</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+                <a href="shoppingcart.html" class="buy-now">ใส่ตระกร้า</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    </section>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+    </section>
+<footer>
+    <!-- Social Media Links -->
+    <div class="footer">
+        <h4>ติดตามเรา</h4>
+        <p>253 หมู่บ้านอนาวิล สุวรรณภูมิ ถ.ฉลองกรุง ลำปะติว ลาดกระบัง กรุงเทพฯ 10520 ประเทศไทย</p>
+        <div class="footer-container">
+            <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
+            <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
+            <a href="#" target="_blank">🐦 Twitter</a>
+            <a href="#" target="https://www.tiktok.com/@siam10winery?_t=ZS-8u41NzHQrYN&_r=">🔗 Tikkok</a>
+        </div>
+    </div>
+    
+</footer>
+</section>
+<section>
+
+          
+    </div>
+    </footer>		
+			<div class="center-flex">
+            <h2>ติดต่อเรา</h2>
+            <p>I© 2024 การใช้ชีวิตอย่างมีสุขภาพดีอย่างแท้จริง สงวนลิขสิทธิ์ อ่านนโยบายความเป็นส่วนตัวของเรา 
+                <a href="https://lin.ee/RBnKOuz">ติดต่อเราผ่านไลน์ Official
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE Official Account" width="30"></a>.</p>
+                 
+        </div>
+</body>
+</html>

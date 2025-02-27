@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="最高品質のはちみつを提供するプレミアムはちみつコレクションサイトです。">
+        <meta name="keywords" content="プレミアムハニー、ナチュラルハニー、ピュアハニー、ハニーコレクション、コーヒー豆タイ、ハニーワイン">
+        <meta name="author" content="パッチャリン・チャナプクディー">
+        <!-- Open Graph Meta Tags (for social sharing) -->
+        <meta property="og:title" content="プレミアムハニーコレクション">
+        <meta property="og:description" content="自然の最高級の供給源から作られた当社のプレミアム蜂蜜コレクションをご覧ください。">
+        <meta property="og:image" content="https://example.com/honey-image.jpg">
+        <title>プレミアムワイン,サイアムテンワイナリー、赤ワイン、ハニー、本物の天然蜂蜜花から採れた蜂蜜|オレンジの木の蜂蜜|薬としての蜂蜜|花蜜|砂糖の代替品|健康のための蜂蜜</title>
+        <!-- Google Fonts - Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- External Stylesheets -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/shared/general.css">
+    </head>
+</html>
+    <style>
+		/* Slider Container middle text */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 410px;  /* Adjust the height to fit your design */
+            overflow: hidden;
+            max-width: 1350px;
+            height: 430px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .slider {
+            display: flex;
+            transition: transform 1s ease;
+            width: 100%;
+        }
+		/* Each slide */
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+		.slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Text Overlay for Honey Slides */
+        .slide .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+			padding: 20px 20px;
+			padding-top: 400px;
+			height: 10vh;
+			text-shadow: 2px 2px 4px Black;
+        }
+        /* Navigation Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        /* Dots for Navigation */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #FFD700; /* Golden color for active dot */
+        }
+        .language-selector {
+            background-color: #444;
+            color: white;
+            border: 1px solid #fff;
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+			position: absolute;
+			top: 15px;
+			right: 20px;
+        }
+        .language-selector option {
+            background-color: #333;
+            color: white;
+        }
+        .language-selector:focus {
+            outline: none;
+        }
+	.language-selector-container {
+            font-family: Arial, sans-serif;
+            text-align: right;
+            margin-top: 20px;
+			margin-bottom: 20px;
+        }
+        label {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        select {
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+         /* About our product.conteainer head */
+         .center-flex {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: auto; /* Makes the container fill the entire viewport height */
+	        background-color: #2B2B2B; /* Choose your background color */
+            color: white;  /* Text color inside the header */
+			padding-top: : 5px;
+		    padding-bottom: 5px;
+            text-align: center;
+			margin: 20px 0; 
+        }
+	    .highlight-frame {
+            background: linear-gradient(to right, #fff5db, #f9f1c2);
+            border: 2px solid #e2b007;
+            padding: 5px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+			margin: 10px 0;
+		}
+	    /* content <p> */
+	    .left-align {
+		    text-align: left;
+		    background-color: white;
+		    padding: 10px;
+	    }
+        .center-align {
+		    text-align: center;
+		    background-color: white;
+		    padding: 10px;
+	    }
+        /* Colume wine paring>> Responsive hight Columns */
+		  .container {
+            display: flex;
+            gap: 20px;  /* Adds space between columns */
+        }
+        .column {
+            height: 350px;  /* Set fixed height for each column */
+            width: 350px;  /* Set a width for the column */
+            background-color: lightgray;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }  
+        table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        th{
+            text-align:right; 
+        }
+        td{
+            text-align:right;
+        }
+        .td-productlist{
+          border-bottom: 1px solid #f0f0f0;
+          color: #333;
+          text-align: center;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        tr:hover {
+            background: #f1f1f1;
+        }
+        button{
+          size: 8px;
+          width: 90px;
+        }  
+    </style>
+<body>    
+	<div class="language-selector-container">
+    <a href="index.html" onclick="changeLanguage('en')">English🇺🇸</a> | 
+    <a href="th.html" onclick="changeLanguage('th')">ภาษาไทย🇹🇭</a> | 
+    <a href="jp.html" onclick="changeLanguage('es')">日本語🇯🇵</a>　| 
+　　　<a href="" onclick="changeLanguage('es')">中国🇨🇳</a>　| 　
+    <div id="content">
+        <!-- Content will change based on the selected language -->
+        私たちのウェブサイトへようこそ！
+    </div>
+	<div class="highlight-frame">
+    <p>"ワインと蜂蜜は自然の黄金であり、純粋で自然で、人生を豊かにする性質に満ちています。"</p>
+</div>
+</body>
+<head>
+    <style>
+        /* Slider container */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1215px;
+            height: 550px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+			padding: 2px,2px,2px,2px;
+        }
+        /* Slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        /* Each slide */
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+			padding: 5px,5px,5px,5px;
+        }
+        /* Navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dots navigation */
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: white;
+        }
+        /* Basic Styling */
+        body 
+		{
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+		/* blackground colors header */
+        header {
+            background-color: #2B2B2B;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+			padding-top: 10px
+        }
+        nav {
+            background: #e2b007;
+            padding: 10px;
+            text-align: center; /* Fallback for non-flex environments */
+            font-size: 18px;
+            display: flex;
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers items vertically */
+            height: 60px; /* Optional: Adjust height for better alignment */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            background-color: #6e2c00; /* Highlight on hover */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+			text-align: center;
+			font-size: 18px;
+        }
+        nav ul li {
+            position: relative; /* Required for dropdown positioning */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 3px 30px;
+            display: block;
+			font-size: 18px;
+			text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Dropdown Menu Styling */
+        nav ul li ul {
+            display: none; /* Hide dropdown by default */
+            position: absolute;
+            top: 100%; /* Position below the parent menu item */
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            z-index: 1000;
+            
+        }
+        nav ul li ul li {
+            border-bottom: 1px solid #555;
+        }
+
+        nav ul li ul li a {
+            padding: 10px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #575757;
+        }
+        /* Show dropdown on hover */
+        nav ul li:hover > ul {
+            display: block;
+        }
+		/* Catalog Container */
+        .hero {
+            background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+            height: 200px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 5.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .section {
+            padding: 10px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+			color: #333;
+			border-color: burlywood
+        }
+        .product {
+            background: #f8f1e1;
+            border: 1px solid #d4b483;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+		}
+        
+		main {
+            padding: 20px;
+        }
+		h2 {
+			text-align: center;
+		}
+		
+        section {
+            margin-bottom: 5px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+		 /* footer */
+         footer {
+            background: #e2b007;
+            color: #fff;
+            align-items: center;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            height: 20vh;
+            margin: 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            text-align: center; /* Ensures text inside is centered */
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row; /* Stack items vertically */
+            justify-content: center;
+            align-items: center; /* Center horizontally */
+            max-width: 1200px;
+            margin: 0px auto;
+            font-size: medium;
+            text-align: center; /* Ensures text is centered */
+            font-size: 16px;
+        }
+        .footer-section {
+                margin: 0;
+                padding: 1px 0;  /* Reduced padding to make it more compact */
+            }
+        .footer-section h3 {
+            font-size: 18px;
+			color: #000000;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2b007;
+            padding-bottom: 5px;
+        }
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #000000;
+            text-decoration: none;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #000000;
+            font-size: 18px;
+        }
+        /* Button */
+        .buy-now {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #2F4F4F;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .buy-now:hover {
+			   background-color: #2F4F4F;
+        }  
+		.center-image {
+            display: block;         /* Makes the image a block element */
+            margin: 0 auto;         /* Centers the image horizontally */
+		
+		}
+    </style>
+</head>
+<body>
+	<header>
+    <h1> Siam Ten の 100% 天然製品 (健康とウェルネス)</h1>
+	 <div class="slider">
+    <!-- Slides container -->
+    <div class="slides">
+        <div class="slide">
+            <img src="https://lakechelanwinevalley.com/wp-content/uploads/2021/11/Wine-grapes-in-a-vineyard-at-Lake-Chelan.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://honey.com/images/default/Celebrating-Beekeeping-Around-the-World-Apimondia.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://traynorvineyard.com/cdn/shop/articles/htb_traynor_w-2.jpg?v=1611006329">
+			</div>
+		<div class="slide">
+            <img src="https://killroy.com/wp-content/uploads/2023/02/Mature-Olive-Trees.jpg">
+        </div>
+		 <div class="slide">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589223943856-X0XWNCJ5S5Z55UUN9A4L/Do+You+Prefer+Red+Or+White+Wine%3F+Why+We+Tend+To+Like+One+Better?format=2500w">
+        </div>
+		<div class="slide">
+            <img src="https://kandrafoods.com/wp-content/uploads/2021/03/honey-varieties-with-comb-and-pollen.jpg">
+        </div>
+		<div class="slide">
+            <img src="https://i2.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-Safely-Cooking-with-Olive-Oil-The-Dos-and-Donts-You-Need-to-Know-Consider-the-smoke-point-of-your-olive-oil.jpg?resize=600%2C338&ssl=1">
+        </div>
+		<div class="slide">
+            <img src="https://www.piedmont.org/media/BlogImages/Healthiest%20cooking%20oils.jpg">
+        </div>
+    </div>
+    <!-- Navigation buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Dots navigation -->
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<script>
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    // Update the slider
+    function updateSlider(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Navigate to the next slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Navigate to the previous slide
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+        updateSlider(currentIndex);
+    }
+
+    // Automatic sliding
+    let autoSlide = setInterval(nextSlide, 3000);
+
+    // Pause auto sliding on user interaction
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider(index);
+            resetAutoSlide();
+        });
+    });
+    // Initialize
+    updateSlider(currentIndex);
+</script>
+</header>
+<header>
+	<nav>
+        <ul>
+		<li><a href="index.html">ホームページ</a></li>
+            <li>
+                <a href="#services">プレミアムワイン</a>
+                <ul>
+                    <li><a href="buywine.html">ワインを注文する</a></li>
+                    <li><a href="Wineclass.html">オンラインワイン作り教室</a></li>
+                    <li><a href="Winebenefit.html">ワイン作りツール</a></li>
+                    <li><a href="Winebenefit.html">ワインのペアリング</a></li>
+                </ul>
+            </li>
+			<li>
+                <a href="#honey">ハニー</a>
+                <ul>
+                    <li><a href="#Pine">松の蜂蜜</a></li>
+                    <li><a href="#Flower">いろいろな花の蜂蜜</a></li>
+                    <li><a href="#Thyme">ミントタイムハニー</a></li>
+					<li><a href="#Oak">オークの森からの蜂蜜</a></li>
+					<li><a href="#Orange">オレンジ蜂蜜</a></li>
+                    <li><a href="#Fir">Fir</a></li>
+					<li><a href="#Vanilla">パールハニー</a></li>
+                </ul>
+            </li>
+			<li><a href="#Olive oil">エクストラバージンオリーブオイル</a></li>
+			<li><a href="#Cusmetic">オーガニックスキンケア</a></li>
+            <li><a href="#Cusmetic">支店・ロケーション</a></li>
+			<li><a href="#about">私たちについて</a></li>
+			<li>
+                <a href="#services">お問い合わせ</a>
+               <ul>
+                    <li><a href="#Wine-Shop">海外への配送サービス</a></li>
+                </ul>
+    </nav>
+	</header>
+	<main>
+        <div class="center-flex">
+            <h3><marquee direction="left">親愛なるお客様へオンライン決済システムが進化しているためLINE【ライン】からも商品をご注文いただけます公式　情報を知りたい場合は、＋６６８９　６９３　１６６８ までご連絡ください。<a href="https://lin.ee/RBnKOuz">ここをクリック</a></marquee></h3>
+        </div>
+        <section id="about">
+            <h2>私たちについて</h2>
+		<div class="left-align">
+            <p>SiamTen はイノベーション部門と協力して、製品アイデアのブレインストーミング、調査、評価を行っています。アジアもヨーロッパも国々構想から開発、市場投入までプロジェクトを管理します。食品科学検査の実施安定性と保存期間のテストが含まれます。製品の完全性、品質、規制基準への準拠を確保するため私は自然と一緒に働くのが大好きです。完璧で健康な体を手に入れましょう。 <a href="#">Read More</a></p>
+		</div>
+	</section>
+	
+	<div class="center-flex">
+        <h2>食べ物は薬です</h2>
+		</div>
+	<div style="text-align: left;">
+	<p>会社沿革 Siam10Winery は、Patcharin Chanapakdee によって設立された会社です。 私は東南アジアのタイのバンコクに住んでいます。 (私の土地はスワンナプームに由来します) 「黄金の国」）は農業機械ロボットのみで動作します。私はグローバル化した企業で 19 年間働いた経験があり、スタンフォード国際大学 (タイ) で MBA を取得し、規制遵守と環境持続可能性管理の専門家として働いています。 15 年間にわたって大規模なソーシャル コミュニティを築いてきた Siam10 は、生活のための環境の持続可能性を促進するプロジェクトに着手しています。何事にも全力を注ぎながら人間の人生には、私がこの世界に留まることを危うくするようなひどい出来事が起こるかもしれません。アルコール依存症の人に会いましたが、それは私の精神に大きな影響を与えました。私は酒飲みでもアルコール依存症でもありません。しかし、これらはあなたの周りの人から来ます。悪いことは私の心と感情を恐ろしい方法で破壊します。常識の欠如無責任な認識の欠如人を怪物に変える精神的に落ち着かず、それが何なのか理解できませんでした。それは私にトラウマ的な身体的状態を残しました。家族は協力的で、私に何が起こっているのか心配してくれました。彼らは私に何が起こったのか理解させようと努めました。そんなある日、ギリシャの養蜂家に出会いました。穏やかで安全な気がします。しかし、その瞬間、私は常識が非常に欠けていると感じました。しかし、そこから私はこの主題を学び始め、再び自然の平和と美しさに魅了されました。私はミツバチ、蜂蜜、そして周囲の熱帯雨林の自然を楽しんでいます。自然と幸せを感じます。そして、この自然が私の気持ちや感情をどんどん癒してくれるようになりました。眠れないので睡眠薬を飲んでいます。抗生物質を飲むのは体に良くないと知っていたので、ブドウと蜂蜜を使って天然のお酒を作る実験をしました。私はギリシャ人から古代のワイン造りのプロセスを注意深く学び、すべてのステップを注意深く興味を持って試しました。科学実験も含めて。これにより、ワインは体に害を与えず、安全に飲むことができます。よく眠れるようになり、心が穏やかになり、健康的な食べ物をより適切に選択できるようになったことがわかりました。それが私の意識が再び機能し始めた始まりでした。だって、この世界には私がまだ出会っていない物語がまだまだたくさんあるのだから。私も食べ物と健康を他の人たちと共有したいです。それが、サイアム 10 ワイナリー アンド ハニーが今日設立された理由です。</p>
+		<h4>エレガンスを高めるために設計された最高の製品とサービスをご覧ください。蜂蜜は天然の甘味料であり、多くの健康上の利点があります。蜂蜜には抗酸化物質と栄養素が豊富に含まれています。何世紀にもわたって、料理と薬用の両方の目的で使用されてきました。緑色の食品は通常、高レベルのクロロフィルにより自然に緑色をしている野菜、果物、または植物です。色を与える色素ですこれらの食品には多くの場合</h4>
+		<ul>
+    <li>ビタミン（A、C、K、葉酸）</li>
+    <li>ミネラル（鉄、マグネシウム、カリウム）</li>
+    <li>ファイバ</li>
+    <li>純粋な自然から得られるさまざまなビタミン</li>
+    <li>蜂蜜やワインに含まれる抗酸化物質（ルテインやゼアキサンチンなど</li>
+</ul>
+	<p>なぜ蜂蜜を食べなければならないのですか？?<a href="more-about-honey.html">続きを読む</a></p>
+	</div>
+	
+	<h2>赤ワインと白ワインの違い<b>bold</b> text.</h2>
+	<img src="https://images.squarespace-cdn.com/content/v1/5ab15305f2e6b1848781c80f/1589226174810-0MI7LST26KC0PUGAZGD1/red-wine-vs-white-wine2.png?format=2500w" alt="Centered Image" width="450" height="200" style="display: block; margin: 0 auto;">
+	<div class="left-align">
+		<p>初心者にとって、白ワインと赤ワインには大きな違いがあり、好みに影響を与える可能性があります。これらのワインはさまざまな色のブドウから作られています。赤ワインには赤ブドウのみが使用されます。一方、白ワインには主に白ブドウが使われます。赤ブドウやピンクがかったグレーの場合もあります。しかし、発酵プロセスにも重要な違いがあります。味に影響を与えるもの赤ワインは発酵中に皮がついたままのブドウから作られます。一方、白ワインは、発酵前に皮を剥いたブドウから作られます。白ワインにもさまざまな熟成方法があります。白ワインはスチールタンクまたはタンクで熟成されます。赤ワインは通常オーク樽で熟成されます。ワインを熟成させる容器は、ワインの空気循環と酸味に影響を与えます。その結果、赤ワインはより滑らかで、より豊かで、より複雑になります。一方、白ワインはよりすっきりとした味わいになる傾向があります。少し甘いそして酸味が強いワインにもタンニンは含まれています。それはワインを飲む体験の一部です。ワインを飲んだときに舌の奥が乾いた感じになるのはタンニンが原因です。その経験が気に入ったらタンニンの多い赤ワインを好む場合があります。しかし、タンニンが嫌いな場合、またはタンニンに敏感な場合はどうすればよいでしょうか?白ワインの方が好みかもしれません。<br>ベリーや柑橘類も考慮すべきです。赤ワインは、ラズベリー、チェリー、イチゴなどのベリー系の香りが強い傾向があります。白ワインはブルーベリーやブラックベリーなどの軽やかな香りが特徴です。そしてカシス白ワインのフレーバーは、柑橘類、リンゴ、桃、その他の軽いフルーツの香りが支配的ですが、赤ワインも豊かな土の香りとチョコレート、木、タバコ、スパイスの香りが感じられるワインです。あらゆる要素についてのあなたの感情これらが、ある要素を別の要素よりも好む理由である可能性があります。しかし、自分の情熱にもっと深い意味を求めている場合はどうすればよいでしょうか?あなたの性格も選択に影響を与える可能性があります。 2019年5月にOnePollがコラヴァンのために実施した調査では、赤ワイン愛好家と白ワイン愛好家は異なる性格特性を持っていることが判明しました。これが彼らが見つけたものです。</p>
+	</div>
+    <section id="honey" class="section">
+        <div class="center-flex">
+            <h2>黄金の地中海の蜂蜜</h2>
+    </div>
+            <!-- Product 1 -->
+        <div class="products">
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkvhjQYjXOOnzJv-kND9xBIqF00HbTqcWqCw&s" alt="red wine" height="50">
+                <h3>Red Wine</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">力強く、現代的なタッチを備えた卓越した味わい。</p>
+                <p style="text-align: center;">サイズ: 750ミリ</p>
+                        <a href="redwine.html">続きを読む</a></p>
+                <p class="product-price">$55.20</p>
+                <div class="products">
+                    <select id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="products">
+                <div class="product">
+                    <img src="https://www.bhg.com/thmb/JrzRu1jCDQ_6o6wEUH9uG-n_YjE=/6628x0/filters:no_upscale():strip_icc()/bhg-honey-wine-7569412-a5beac5f00cb420e89e0050662fe71c0.jpg" alt="yellow Wine">
+                    <h3>ワインと蜂蜜は自然の黄金、つまり純粋です。
+                      Wain to hachimitsu wa shiz</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p style="text-align: left;">エレガントで美しく、バランスの取れたゴールドで、どんなシーンでも不滅です。</p>
+                <p style="text-align: center;">サイズ: 750ミリ</p>
+                    <a href="buywine.html">続きを読む</a></p>
+                <p class="product-price">$47.00</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://mybartender.com/wp-content/uploads/2023/11/refreshing-hibiscus-cocktail.png" alt="Cocktail Hibis Wine"> 
+                    <h3>ハイビスカスワインカクテル</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+                    <p style="text-align: left;">自然な花の香り自然の美しさに夢中</p>
+                    <p style="text-align: center;">サイズ: 750ミリ</p>
+                        <a href="buywine.html">続きを読む</a></p>
+                    <p class="product-price">$40.00</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+            </div>
+            </div>
+            <!-- Product 4 De-->
+            <div class="products">
+                <div class="product">
+                    <img src="https://thebrandsmen.com/wp-content/uploads/2022/03/benefits-of-rose-wine.jpg" alt="Rosé Wine">
+                    <h3>ไวน์โรเซ่</h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                    <p style="text-align: left;">繊細で香り高く、清涼感のある味わい。</p>
+                    <p style="text-align: center;">ขนาด : 750 มล.</p>
+                        <a href="buywine.html">続きを読む</a></p>
+                    <p class="product-price">$46.00</p>
+                <div class="products">
+                    <select id="quantity">
+                <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">サイズ: 450グラム</a>
+            </div>
+        </div>
+    </section>
+    <section id="honey" class="section">
+        <div class="center-flex">
+            <h2>黄金の地中海の蜂蜜</h2>
+    </div>
+            <!-- Product 5 -->
+        <div class="products">
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
+                <h3>Pine Honey</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">純粋で天然のアイドゥン松ハニーは、その独特の味と香りであなたをアイドゥンのユニークな松林へと誘います。</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                    <a href="buywine.html">続きを読む</a></p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
+                <h3>Flower Honey</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">このタイプの蜂蜜は花の蜜から得られます。</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
+                <h3>Thyme Honey</h3>
+                <p style="text-align: left;">タイム蜂蜜は、そのスパイシーな味と特別な健康特性により、特別な種類の蜂蜜です。</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+            </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="products">
+                <div class="product">
+              <img src="https://static.wixstatic.com/media/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg/v1/fit/w_2500,h_1330,al_c/e0f5fb_9e3cc79757a140d8a9f2d437d8ba858c~mv2.jpg" alt="Oak Honey">
+                <h3>Oak and Forest</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+                <p style="text-align: left;">木の独特の香りと豊かな味わい。高い抗酸化作用とミネラル価を備えた優れたはちみつです</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">サイズ: 450グラム</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="honey" class="section">
+        <div class="center-flex">
+            <h2>野生の蜂蜜、純粋な緑の森の蜂蜜</h2>
+    </div>
+            <!-- Product 9 -->
+        <div class="products">
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnGyqVdQJy7q-0ymBNjbtbJUWr8P-m56dEQ&s" alt="Pine Honey">
+                <h3>พายน้ำผึ้ง</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;"> 新商品も続々入荷中です。</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$00.99</p>
+                <div class="products">
+                    <select id="quantity">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+              </div>
+            </div>
+            <!-- Product 10 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://www.terra-greca.be/wp-content/uploads/2017/05/miel-toutes-fleurs-1024x678-1.jpg" alt="Flower Honey">
+                <h3>น้ำผึ้งจากดอกไม้นานาพันธุ์</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+                <p style="text-align: left;">น้ำผึ้งประเภทนี้ได้มาจากน้ำหวานจากดอกไม้</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                    <a href="https://siam10winery.com/shoppingcart.html" class="buy-now">カートに追加</a>
+                </div>
+            </div>
+            <!-- Product 11 -->
+            <div class="products">
+                <div class="product">
+                <img src="https://cdn.tridge.com/attachment-file/a8/a4/a8/a8a4a847ba37de52506edeaa785d03a3ad974e51/1_puqyyzWF-P1s52UE24tohg.jpeg" alt="THYME HONEY">
+                <h3>ハニータイムは西洋タイムの一種です。</h3>
+                <p style="text-align: left;">タイム蜂蜜は、そのスパイシーな味と特別な健康特性により、特別な種類の蜂蜜です。</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                        <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <a href="shoppingcart.html" class="buy-now">カートに追加</a>
+            </div>
+            </div>
+            <!-- Product 12 -->
+            <div class="products">
+                <div class="product">
+                    <img src="https://www.vanillapura.com/cdn/shop/articles/shutterstock_764193367_1.jpg?v=1633471657&width=1024" alt="Vanilia Honey">
+                    <h3>"パール「ハニーファー」</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+                <p style="text-align: left;">パールハニー、独特の木の香りと味が強くて美味しい、オススメです。高い抗酸化作用とミネラル価を備えた優れたはちみつです。</p>
+                <p style="text-align: center;">サイズ: 450グラム</p>
+                <p class="product-price">$39.99</p>
+                <div class="products">
+                    <select id="quantity">
+                <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+                <a href="shoppingcart.html" class="buy-now">カートに追加</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    </section>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+    </section>
+<footer>
+    <!-- Social Media Links -->
+    <div class="footer">
+        <h4>お問い合わせ</h4>
+        <p>253 Anavil Village、Suvarnabhumi、Chalong Krung Rd.、Lampatiw、Chalongkrug Rd,Bangkok 10520 Thailand</p>
+        <div class="footer-container">
+            <a href="https://www.facebook.com/profile.php?id=61569136800046" target="_blank">🌐 Facebook</a>
+            <a href="https://www.instagram.com/siam10winery/profilecard/?igsh=cW5remt1NnA1dTdv" target="_blank">📸 Instagram</a>
+            <a href="#" target="_blank">🐦 Twitter</a>
+            <a href="#" target="https://www.tiktok.com/@siam10winery?_t=ZS-8u41NzHQrYN&_r=">🔗 Tikkok</a>
+        </div>
+    </div>
+    
+</footer>
+</section>
+<section>
+    </div>
+    </footer>		
+			<div class="center-flex">
+            <h2>お問い合わせ</h2>
+            <p>I© 2024 本当に健康的な生活を送る無断転載を禁じます。当社のプライバシーポリシーを読む
+                <a href="https://lin.ee/RBnKOuz">ラインでお問い合わせください
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE Official Account" width="30"></a>.</p>
+                 
+        </div>
+</body>
+</html>

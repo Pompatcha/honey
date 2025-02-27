@@ -1,0 +1,378 @@
+/*Header drop down*/
+/* blackground colors header */
+header {
+  background-color: #f4ecec;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  padding-top: 10px
+  align-items: :center;
+  width: 1496px;
+}
+nav {
+  background: #e2b007;
+  padding: 10px;
+  text-align: center;
+font-size: 18px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  background-color: #6e2c00; /* Highlight on hover */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+text-align: center;
+font-size: 18px;
+}
+nav ul li {
+  position: relative; /* Required for dropdown positioning */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 3px 30px;
+  display: block;
+font-size: 18px;
+text-align: center;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+/*Hightligh frame*/
+.highlight-frame {
+    width: 1450px;
+    align-items: center;
+    background: linear-gradient(to right, #fff5db, #f9f1c2);
+    border: 2px solid #e2b007;
+    border-radius: 8px;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    margin-top: 90px; /* Space below the dropdown */
+   
+    position: relative; /* Ensures it stays below dropdown */
+    } 
+
+  /*language dropdown* Menu*/
+
+.language-dropdown {
+    position: absolute;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    }
+.dropdown-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 260px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 160px;
+    text-align: left;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    color: black;
+    padding: 8px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+    
+/* Dropdown Menu Styling */
+nav ul li ul {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+nav ul li ul li {
+  border-bottom: 1px solid #555;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+}
+nav ul li ul li a:hover {
+  background-color: #575757;
+}
+/* Show dropdown on hover */
+nav ul li:hover > ul {
+  display: block;
+}
+/* Catalog Container */
+.hero {
+  background: url('wine-honey-hero.jpg') no-repeat center center/cover;
+  height: 200px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 5.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1215px;
+  height: 550px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+padding: 2px,2px,2px,2px;
+}
+/* Slides */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+/* Each slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+padding: 5px,5px,5px,5px;
+}
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots navigation */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+.dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: white;
+}
+
+/* Universal Styles */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+}
+
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+/* Banner Section */
+
+p {
+  min-width: 200px;
+  min-height: 200px;
+}
+
+#banner {
+  height: 16rem;
+  background-image: url('camel-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#banner h1 {
+  font-size: 3.75rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+/* Blog Post */
+
+#blog {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blog .post {
+  width: 52%;
+  margin-top: 12.5%;
+  margin-bottom: 7.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.post h2 {
+  font-size: 1.875rem;
+
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  color: #999999;
+}
+
+.post .opening-line {
+  margin-top: 4.1875rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.post .image-container {
+  width: 100%;
+}
+
+/* Blog Images */
+
+.images {
+  margin-bottom: 20%;
+}
+
+.images .image-container {
+  width: 100%;
+}
+/* Footer Styling */
+footer {
+  background: #e2b007;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  height: 50vh;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer-section {
+  margin: 5px;
+  padding: 10px 10px; /* Increased padding slightly for spacing */
+  
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.social-icons {
+  margin-top: 100px;
+  max-width: 1200px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
