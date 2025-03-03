@@ -94,6 +94,44 @@
                 transform: translateY(0);
             }
         }
+    /* Login Container */
+    .login-container {
+        display: flex;
+        align-items: center;
+        width: 40%;  /* Adjust width to fill the container */
+        height: 10vh; /* Full height */
+        color: white;
+        gap: 20px;
+    
+        /* Flexbox for row layout */
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            background-color: #000000;
+        }
+        /* Button Styling */
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from link */
+        }
+        /* Button Hover Effect */
+        .btn:hover {
+            background-color: #4e5bd3;
+        }
+
+        /* Register Link Styling */
+        .register-link {
+            
+
+        
 		/* Slider Container middle text */
         .slider-container {
             position: relative;
@@ -278,9 +316,13 @@
             <a href="cn.html" onclick="changeLanguage('cn')">🇨🇳 中国</a>
         </div> 
     </div>
-    <div class="content"
-        <!-- Content will change based on the selected language -->
-        <p>Welcome to our website!</p>
+
+    <div class="login-container">
+       <div><a href="Login.html" class="btn">Log In</a></div>
+       <div><a href="register.html" class="btn">New Register</a></div>
+    </div>
+    
+   
 </div>
 	<div class="highlight-frame">
     <p>"🍷Wine and honey🐝 is the gold of nature—pure, natural, and filled with life-enhancing properties."</p>
@@ -920,6 +962,29 @@
 </section>
 <!-- Link to external JavaScript file -->
 <script src="script.js"></script>
+
+
+<!-- Customer log in -->
+<script>
+    // Get the username from localStorage (assuming user logged in previously)
+    const username = localStorage.getItem("username");
+
+    // Display the username
+    if (username) {
+        document.getElementById("username-display").textContent = username;
+    } else {
+        document.getElementById("username-display").textContent = "Guest";
+    }
+
+    // Function to go to the shopping page
+    function goToShoppingPage() {
+        if (username) {
+            window.location.href = "shopping-page.html?username=" + encodeURIComponent(username);
+        } else {
+            alert("Please log in to access the shopping page.");
+        }
+    }
+</script>
 </section>
 <section>
     <footer>
