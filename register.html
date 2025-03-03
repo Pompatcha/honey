@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Member Registration</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpaperaccess.com/full/2064241.jpg');
+            background-size: cover;  /* Cover entire screen */
+            background-position: center;  /* Center image */
+            background-repeat: no-repeat; /* No repeating */
+                    
+        }
+        .registration-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            background-color: #4e5bd3;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <h2>New Member Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Phone:</label>
+                <input type="tel" id="mobile" required>
+            </div>
+            <button type="button" class="btn" onclick="sendOTP()">Send OTP</button>
+
+            <div class="form-group" style="margin-top: 15px;">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" required>
+            </div>
+            <button type="button" class="btn" onclick="verifyOTP()">Verify & Register</button>
+        </form>
+    </div>
+
+    <script>
+        function sendOTP() {
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+
+            if (!email || !mobile) {
+                alert("Please enter both Email and Mobile Number.");
+                return;
+            }
+
+            // Generate a random 6-digit OTP
+            let otp = Math.floor(100000 + Math.random() * 900000);
+            localStorage.setItem("generatedOTP", otp); // Store OTP temporarily
+
+            // Simulating email sending (Replace this with backend integration)
+            alert(`OTP Sent to Email: ${email}\nYour OTP: ${otp}`);
+        }
+
+        function verifyOTP() {
+        let userOTP = document.getElementById("otp").value;
+        let storedOTP = localStorage.getItem("generatedOTP");
+
+        if (userOTP === storedOTP) {
+            alert("Registration Successful! Redirecting to the shopping page...");
+            localStorage.removeItem("generatedOTP"); // Clear OTP after success
+            window.location.href = "Setpasswords.html"; // Change this to your shopping page URL
+        } else {
+            alert("Invalid OTP. Please try again.");
+        }
+    }
+    </script>
+
+</body>
+</html>
